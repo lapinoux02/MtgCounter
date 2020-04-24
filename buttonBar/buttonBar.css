@@ -1,0 +1,27 @@
+#buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	height: 12vw;
+	margin-bottom: 5vw;
+}
+
+.button {
+    height: 10vw;
+    width: 35vw;
+    display: flex;
+    border-radius: 1vw;
+    font-size: 7vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.button.primary {
+	border: var(--border) solid var(--color1);
+	color: var(--color1);
+	background-color: var(--color3);
+}
+
+.button.secondary {
+	color: var(--color1);
+}

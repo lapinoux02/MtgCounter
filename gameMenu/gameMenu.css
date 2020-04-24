@@ -1,0 +1,40 @@
+#gameMenu {
+	width: 100vw;
+	height: 92vh;
+	background-color: black;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding-top: 6vh;
+	padding-bottom: 2vh;
+}
+
+#options {
+	width: 100vw;
+	height: 60vh;
+	display: flex;
+	flex-direction: column;
+}
+
+#options div {
+	margin-bottom: var(--margin);
+}
+
+.squareButton {
+	width: var(--lineHeight);
+	height: var(--lineHeight);
+	border-radius: 1vw;
+	border: var(--border) solid var(--color1);
+	color: var(--color1);
+	font-size: var(--fontSize2);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: calc(var(--margin) / 2);
+	margin-right: calc(var(--margin) / 2);
+}
+
+.squareButton.active {
+	color: black;
+	background-color: var(--color1);
+}

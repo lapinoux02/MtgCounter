@@ -1,0 +1,24 @@
+#randomPlayer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#randomPlayer .title {
+    display: flex;
+    justify-content: center;
+    font-size: var(--fontSize2);
+    color: var(--color2);
+}
+
+#randomPlayer .randomButton {
+	margin-top: var(--margin);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: calc(var(--lineHeight) * 5 + var(--margin) * 4 + var(--border) * 8);
+	height: var(--lineHeight);
+	border: var(--border) solid var(--color1);
+	border-radius: 1vw;
+	font-size: var(--fontSize2);
+}

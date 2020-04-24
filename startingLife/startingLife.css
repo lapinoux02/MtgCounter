@@ -1,0 +1,31 @@
+#startingLife {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#startingLife .title {
+    display: flex;
+    justify-content: center;
+    font-size: var(--fontSize2);
+    color: var(--color2);
+}
+
+#startingLife .buttonsLine {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: var(--margin);
+}
+
+#startingLife .buttonsLine .data {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: var(--fontSize2);
+	color: var(--color1);
+	width: calc(var(--lineHeight) + 4px);
+	height: calc(var(--lineHeight) + 4px);
+	margin-left: 1vw;
+	margin-right: 1vw;
+}

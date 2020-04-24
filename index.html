@@ -11,16 +11,43 @@
 	<link rel="stylesheet" type="text/css" href="./app.css" />
 	<link rel="stylesheet" type="text/css" href="./board/board.css" />
 	<link rel="stylesheet" type="text/css" href="./playerTile/playerTile.css" />
+	<link rel="stylesheet" type="text/css" href="./commanderDamage/commanderDamage.css" />
+	<link rel="stylesheet" type="text/css" href="./commanderDamageLine/commanderDamageLine.css" />
+	<link rel="stylesheet" type="text/css" href="./gameMenu/gameMenu.css" />
+	<link rel="stylesheet" type="text/css" href="./startingLife/startingLife.css" />
+	<link rel="stylesheet" type="text/css" href="./playersManager/playersManager.css" />
+	<link rel="stylesheet" type="text/css" href="./randomPlayer/randomPlayer.css" />
+	<link rel="stylesheet" type="text/css" href="./buttonBar/buttonBar.css" />
 	<!-- Libraries -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.js"></script>
 	<!-- app -->
+	<script src="./utils/utils.js"></script>
 	<script src="./board/board.js"></script>
 	<script src="./playerTile/playerTile.js"></script>
+	<script src="./commanderDamage/commanderDamage.js"></script>
+	<script src="./commanderDamageLine/commanderDamageLine.js"></script>
+	<script src="./gameMenu/gameMenu.js"></script>
+	<script src="./startingLife/startingLife.js"></script>
+	<script src="./playersManager/playersManager.js"></script>
+	<script src="./randomPlayer/randomPlayer.js"></script>
+	<script src="./buttonBar/buttonBar.js"></script>
 
 </head>
-<body>
+<body oncontextmenu="return false">
 	<div id="app">
-		<board :players="players"></board>
+		<game-menu v-if="vue === 'gameMenu'"
+			:gamedata="gameData"
+			@openboard="openBoard"
+		></game-menu>
+		<board v-if="vue === 'board'"
+			@opencommanderdamage="openCommanderDamage"
+			@opengamemenu="openGameMenu"
+		></board>
+		<commander-damage
+			v-if="vue === 'commanderDamage'"
+			:player="selectedPlayer"
+			@openboard="openBoard"
+		></commander-damage>
 	</div>
 </body>
 <script src="./app.js"></script>

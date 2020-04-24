@@ -1,6 +1,5 @@
 class Player {
 	constructor(id, name) {
-		// L'id est aussi l'index dans le tableau des joueurs
 		this.id = id;
 		this.name = name;
 		this.life = 40;
@@ -12,19 +11,36 @@ class Player {
 const PLAYERS = [];
 const registerPlayer = (id, name) => {
 	PLAYERS.push(new Player(id, name));
-	PLAYERS.forEach(p => Object.assign(p.commanderDamages, PLAYERS.map(pp => ({id: pp.id, damage: 0}))));
+	PLAYERS.forEach(p => Object.assign(p.commanderDamages, PLAYERS.map(pp => ({id: pp.id, name: pp.name, damage: 0}))));
 }
-registerPlayer(0, 'Paul');
-registerPlayer(1, 'Bastien');
-registerPlayer(2, 'Seboubou');
-registerPlayer(3, 'Gaëtanos');
-registerPlayer(4, 'Iwan');
 
 new Vue({
 	el: '#app',
 	data() {
 		return {
-			players: PLAYERS
+			selectedPlayer: null,
+			vue: 'gameMenu',
+			gameData: {
+				startingLife: 40
+			}
 		}
+	},
+	methods: {
+		openCommanderDamage(player) {
+			this.selectedPlayer = player;
+			this.vue = 'commanderDamage';
+		},
+		openBoard() {
+			this.vue = 'board';
+		},
+		openGameMenu() {
+			this.vue = 'gameMenu'
+		}
+	},
+	created() {
+		registerPlayer(0, 'Player 1');
+		registerPlayer(1, 'Player 2');
+		registerPlayer(2, 'Player 3');
+		registerPlayer(3, 'Player 4');
 	}
 })

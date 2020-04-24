@@ -4,7 +4,7 @@
 	/* hauteur du cadre principal */
 	--H_M: calc(var(--H) - var(--H_A));
 	/* hauteur du nom */
-	--H_N: 10vw;
+	--H_N: 8vw;
 	/* rayon des coins de la tuile */
 	--B_R: 3vw;
 }
@@ -59,8 +59,11 @@
 
 .playerTile .mainCounter .playerLife {
 	width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 	height: calc(var(--H_M) - var(--H_N));
-	font-size: calc(var(--H_M) - var(--H_N) - 3vw);
+	font-size: calc(var(--H_M) - var(--H_N) - 8vw);
 	position: absolute;
 	top: var(--H_N);
 	left: 0px;
@@ -105,12 +108,22 @@
     text-align: center;
 }
 
+.playerTile .annexeCounters .poison .poisonPlus:before {
+	content: "";
+	margin-left: 20%;
+}
+
 .playerTile .annexeCounters .poison .poisonMinus {
 	z-index: 1;
 	width: 50%;
     color: var(--color3);
     font-weight: bolder;
     text-align: center;
+}
+
+.playerTile .annexeCounters .poison .poisonMinus:after {
+	content: "";
+	margin-right: 20%;
 }
 
 .playerTile .annexeCounters .poison .poisonDamage {

@@ -1,0 +1,35 @@
+.line {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: stretch;
+}
+
+.line .cdName {
+    display: flex;
+    justify-content: center;
+    font-size: var(--fontSize2);
+    color: var(--color2)
+}
+
+.line .counter {
+    display: flex;
+    height: var(--lineHeight);
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: var(--fontSize2);
+}
+
+.line .counter .cdMinus, #cd #lines .line .counter .cdPlus {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    color: var(--color3);
+}
+
+.line .counter .cdDamage {
+	position: absolute;
+	width: 100vw;
+	text-align: center;
+}

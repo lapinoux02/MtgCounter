@@ -1,14 +1,18 @@
 :root {
-	/* couleur principale */
 	--color1: #eac814;
-	/* couleur secondaire */
 	--color2: #898c68;
-	/* couleur tertiaire */
 	--color3: #353333;
-	/* dégradé primaire */
+	--color4: #dedede;
 	--grad1: linear-gradient(black, #802e2e);
-	/* dégradé secondaire */
 	--grad2: linear-gradient(black, #1a4c18);
+	--fontSize1: 7vw;
+	--fontSize2: 6vw;
+	/* hauteur d'une ligne de menus */
+	--lineHeight: 10vw;
+	/* marge entre elements de menus*/
+	--margin: 2vw;
+	/* bordure des elements de menus */
+	--border: 2px;
 
 	/* taille des espaces intertuile et des bordures */
 	--M: 2px;
@@ -28,12 +32,18 @@
 	--W_5_S: calc((100vh - 50vw - var(--M) * 2.5) / 2);
 }
 
+::selection {
+    color: none;
+    background: none;
+}
+
 body {
 	margin: 0px;
 	background-color: var(--color1);
 	color: var(--color1);
 	font-family: Arial, sans-serif;
 	font-weight: bold;
+	overscroll-behavior-y: contain;
 }
 
 #app {
