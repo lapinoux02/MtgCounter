@@ -32,8 +32,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: calc(var(--H_M) - var(--H_N));
-    font-weight: bolder;
+    font-size: calc(var(--H_M) - var(--H_N) - 3vw);
     color: var(--color3);
 }
 
@@ -49,8 +48,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: calc(var(--H_M) - var(--H_N));
-    font-weight: bolder;
+    font-size: calc(var(--H_M) - var(--H_N) - 3vw);
     color: var(--color3);
 }
 
@@ -59,27 +57,25 @@
     width: 40%;
 }
 
+.playerTile .mainCounter .playerLife {
+	width: 100%;
+	height: calc(var(--H_M) - var(--H_N));
+	font-size: calc(var(--H_M) - var(--H_N) - 3vw);
+	position: absolute;
+	top: var(--H_N);
+	left: 0px;
+	text-align: center;
+}
+
 .playerTile .mainCounter .playerName {
 	width: 100%;
 	height: var(--H_N);
 	font-size: var(--H_N);
-	line-height: var(--H_N);
 	position: absolute;
 	top: 0px;
 	left: 0px;
 	text-align: center;
 	color: var(--color2);
-}
-
-.playerTile .mainCounter .playerLife {
-	width: 100%;
-	height: calc(var(--H_M) - var(--H_N));
-	font-size: calc(var(--H_M) - var(--H_N));
-	line-height: calc(var(--H_M) - var(--H_N));
-	position: absolute;
-	top: var(--H_N);
-	left: 0px;
-	text-align: center;
 }
 
 .playerTile .annexeCounters {

@@ -17,6 +17,8 @@ const registerPlayer = (id, name) => {
 registerPlayer(0, 'Paul');
 registerPlayer(1, 'Bastien');
 registerPlayer(2, 'Seboubou');
+registerPlayer(3, 'Gaëtanos');
+registerPlayer(4, 'Iwan');
 
 new Vue({
 	el: '#app',

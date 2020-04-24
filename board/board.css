@@ -1,7 +1,6 @@
 #board {
 	width: 100vw;
 	height: 100vh;
-	overflow: hidden;
 }
 
 #tile13 {
@@ -25,7 +24,55 @@
 }
 
 #tile33 {
-	width: var(--W_3_B);
+	width: var(--W_B);
+	height: var(--H);
+	position: absolute;
+	bottom: var(--M);
+	left: var(--M);
+}
+
+#tile15 {
+	width: var(--W_5_S);
+	height: var(--H);
+    transform: rotate(90deg);
+    transform-origin: calc(var(--H) / 2) calc(var(--H) / 2);
+    position: absolute;
+    top: calc(var(--W_5_S) + var(--M) * 2);
+    left: var(--M);
+}
+
+#tile25 {
+	width: var(--W_5_S);
+	height: var(--H);
+    transform: rotate(90deg);
+    transform-origin: calc(var(--H) / 2) calc(var(--H) / 2);
+    position: absolute;
+    top: var(--M);
+    left: var(--M);
+}
+
+#tile35 {
+	width: var(--W_5_S);
+	height: var(--H);
+    transform: rotate(-90deg);
+    transform-origin: calc(var(--W_5_S) / 2) calc(var(--W_5_S) / 2);
+    position: absolute;
+    top: var(--M);
+    left: calc(var(--H) + var(--M) * 2);
+}
+
+#tile45 {
+	width: var(--W_5_S);
+	height: var(--H);
+    transform: rotate(-90deg);
+    transform-origin: calc(var(--W_5_S) / 2) calc(var(--W_5_S) / 2);
+    position: absolute;
+    top: calc(var(--W_5_S) + var(--M) * 2);
+    left: calc(var(--H) + var(--M) * 2);
+}
+
+#tile55 {
+	width: var(--W_B);
 	height: var(--H);
 	position: absolute;
 	bottom: var(--M);
