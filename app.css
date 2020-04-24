@@ -29,3 +29,8 @@ body {
 	font-family: Arial, sans-serif;
 	font-weight: bold;
 }
+
+#app {
+    overflow: hidden;
+    position: fixed;
+}
