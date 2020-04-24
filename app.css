@@ -14,10 +14,16 @@
 	--M: 2px;
 	/* hauteur d'une tuile */
 	--H: calc(50vw - var(--M) * 1.5);
+	/* hauteur d'une tuile en disposition 2 joueurs */
+	--H_2: calc(50vh - var(--M) * 1.5);
 	/* largeur des tuiles du bas */
 	--W_B: calc(100vw - var(--M) * 2);
+	/* largeur d'une tuile en disposition 2 joueurs */
+	--W_2: calc(100vw - var(--M) * 2);
 	/* largeur d'une tuile des cotés en disposition 3 joueurs */
 	--W_3_S: calc(100vh - 50vw - var(--M) * 1.5);
+	/* largeur d'une tuile des cotés en disposition 3 joueurs */
+	--W_4_S: calc((100vh - var(--M) * 1.5) / 2);
 	/* largeur d'une tuile des cotés en disposition 3 joueurs */
 	--W_5_S: calc((100vh - 50vw - var(--M) * 2.5) / 2);
 }

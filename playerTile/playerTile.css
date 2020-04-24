@@ -1,8 +1,8 @@
 :root {
 	/* hauteur des boutons annexes */
-	--H_A: calc(13vw - var(--M) * 1.5);
+	--H_A: calc(10vw);
 	/* hauteur du cadre principal */
-	--H_M: calc(50vw - var(--H_A));
+	--H_M: calc(var(--H) - var(--H_A));
 	/* hauteur du nom */
 	--H_N: 10vw;
 	/* rayon des coins de la tuile */
@@ -92,9 +92,9 @@
 	display: flex;
 	flex-direction: row;
 	align-items: stretch;
-	height: calc(var(--H_A) - var(--M) * 1.5);
-	font-size: calc(var(--H_A) - var(--M) * 1.5);
-	line-height: calc(var(--H_A) - var(--M) * 1.5);
+	height: var(--H_A);
+	font-size: var(--H_A);
+	line-height: var(--H_A);
 }
 
 .playerTile .annexeCounters .poison .poisonPlus {
@@ -124,9 +124,9 @@
 	width: 50%;
 	background: var(--grad1);
 	border-bottom-right-radius: var(--B_R);
-	height: calc(var(--H_A) - var(--M) * 1.5);
-	font-size: calc(var(--H_A) - var(--M) * 1.5);
-	line-height: calc(var(--H_A) - var(--M) * 1.5);
+	height: var(--H_A);
+	font-size: var(--H_A);
+	line-height: var(--H_A);
 	text-align: center;
     color: var(--color1);
 }
