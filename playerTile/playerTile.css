@@ -1,0 +1,136 @@
+:root {
+	/* hauteur des boutons annexes */
+	--H_A: calc(13vw - var(--M) * 1.5);
+	/* hauteur du cadre principal */
+	--H_M: calc(50vw - var(--H_A));
+	/* hauteur du nom */
+	--H_N: 10vw;
+	/* rayon des coins de la tuile */
+	--B_R: 3vw;
+}
+
+.playerTile {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: stretch;
+	background-color: black;
+	border-radius: var(--B_R);
+}
+
+.playerTile .mainCounter {
+	height: var(--H_M);
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+}
+
+.playerTile .mainCounter .lifePlus {
+	height: var(--H);
+	width: 50%;
+	z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(var(--H_M) - var(--H_N));
+    font-weight: bolder;
+    color: var(--color3);
+}
+
+.playerTile .mainCounter .lifePlus:before {
+    content: "";
+    width: 40%;
+}
+
+.playerTile .mainCounter .lifeMinus {
+	height: var(--H);
+	width: 50%;
+	z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(var(--H_M) - var(--H_N));
+    font-weight: bolder;
+    color: var(--color3);
+}
+
+.playerTile .mainCounter .lifeMinus:after {
+    content: "";
+    width: 40%;
+}
+
+.playerTile .mainCounter .playerName {
+	width: 100%;
+	height: var(--H_N);
+	font-size: var(--H_N);
+	line-height: var(--H_N);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	text-align: center;
+	color: var(--color2);
+}
+
+.playerTile .mainCounter .playerLife {
+	width: 100%;
+	height: calc(var(--H_M) - var(--H_N));
+	font-size: calc(var(--H_M) - var(--H_N));
+	line-height: calc(var(--H_M) - var(--H_N));
+	position: absolute;
+	top: var(--H_N);
+	left: 0px;
+	text-align: center;
+}
+
+.playerTile .annexeCounters {
+	z-index: 1;
+	height: var(--H_A);
+	display: flex;
+	flex-direction: row;
+}
+
+.playerTile .annexeCounters .poison {
+	width: 50%;
+	background: var(--grad2);
+	border-bottom-left-radius: var(--B_R);
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	height: calc(var(--H_A) - var(--M) * 1.5);
+	font-size: calc(var(--H_A) - var(--M) * 1.5);
+	line-height: calc(var(--H_A) - var(--M) * 1.5);
+}
+
+.playerTile .annexeCounters .poison .poisonPlus {
+	z-index: 1;
+	width: 50%;
+    color: var(--color3);
+    font-weight: bolder;
+    text-align: center;
+}
+
+.playerTile .annexeCounters .poison .poisonMinus {
+	z-index: 1;
+	width: 50%;
+    color: var(--color3);
+    font-weight: bolder;
+    text-align: center;
+}
+
+.playerTile .annexeCounters .poison .poisonDamage {
+    position: absolute;
+	width: 50%;
+    color: var(--color1);
+    text-align: center;
+}
+
+.playerTile .annexeCounters .commanderDamage {
+	width: 50%;
+	background: var(--grad1);
+	border-bottom-right-radius: var(--B_R);
+	height: calc(var(--H_A) - var(--M) * 1.5);
+	font-size: calc(var(--H_A) - var(--M) * 1.5);
+	line-height: calc(var(--H_A) - var(--M) * 1.5);
+	text-align: center;
+    color: var(--color1);
+}

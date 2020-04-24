@@ -1,0 +1,32 @@
+#board {
+	width: 100vw;
+	height: 100vh;
+}
+
+#tile13 {
+	width: var(--W_3_S);
+	height: var(--H);
+    transform: rotate(90deg);
+    transform-origin: calc(var(--H) / 2) calc(var(--H) / 2);
+    position: absolute;
+    top: var(--M);
+    left: var(--M);
+}
+
+#tile23 {
+	width: var(--W_3_S);
+	height: var(--H);
+    transform: rotate(-90deg);
+    transform-origin: calc(var(--W_3_S) / 2) calc(var(--W_3_S) / 2);
+    position: absolute;
+    top: var(--M);
+    left: calc(var(--H) + var(--M) * 2);
+}
+
+#tile33 {
+	width: var(--W_3_B);
+	height: var(--H);
+	position: absolute;
+	bottom: var(--M);
+	left: var(--M);
+}

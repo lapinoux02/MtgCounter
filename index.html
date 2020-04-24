@@ -9,14 +9,18 @@
 	<link rel="manifest" type="text/css" href="./manifest.json" />
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="./app.css" />
+	<link rel="stylesheet" type="text/css" href="./board/board.css" />
+	<link rel="stylesheet" type="text/css" href="./playerTile/playerTile.css" />
 	<!-- Libraries -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.js"></script>
 	<!-- app -->
+	<script src="./board/board.js"></script>
+	<script src="./playerTile/playerTile.js"></script>
 
 </head>
 <body>
 	<div id="app">
-		coucou les ploucs
+		<board :players="players"></board>
 	</div>
 </body>
 <script src="./app.js"></script>

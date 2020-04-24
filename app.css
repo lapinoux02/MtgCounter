@@ -1,0 +1,27 @@
+:root {
+	/* couleur principale */
+	--color1: #eac814;
+	/* couleur secondaire */
+	--color2: #898c68;
+	/* couleur tertiaire */
+	--color3: #353333;
+	/* dégradé primaire */
+	--grad1: linear-gradient(black, #802e2e);
+	/* dégradé secondaire */
+	--grad2: linear-gradient(black, #1a4c18);
+
+	/* taille des espaces intertuile et des bordures */
+	--M: 2px;
+	/* hauteur d'une tuile */
+	--H: calc(50vw - var(--M) * 1.5);
+	/* largeur d'une tuile des cotés en disposition 3 joueurs */
+	--W_3_S: calc(100vh - 50vw - var(--M) * 1.5);
+	/* largeur de la tuile du bas en disposition 3 joueurs */
+	--W_3_B: calc(100vw - var(--M) * 2);
+}
+
+body {
+	margin: 0px;
+	background-color: var(--color1);
+	color: var(--color1);
+}
