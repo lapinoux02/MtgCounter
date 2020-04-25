@@ -2,7 +2,7 @@ Vue.component('commander-damage', {
 	props: ['player'],
 	data() {
 		return {
-			tmpData: this.player.commanderDamages.map(e => ({id: e.id, name: e.name, damage: e.damage}))
+			tmpData: this.player.commanderDamages.map(e => ({id: e.id, damage: e.damage}))
 		}
 	},
 	template: `<div id="cd">

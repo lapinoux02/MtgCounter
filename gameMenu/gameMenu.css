@@ -1,26 +1,32 @@
 #gameMenu {
 	width: 100vw;
-	height: 92vh;
+	height: 98vh;
 	background-color: black;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	padding-top: 6vh;
 	padding-bottom: 2vh;
 }
 
-#options {
+#gameMenu #title {
+    display: flex;
+    justify-content: center;
+    font-size: var(--fontSize1);
+    color: var(--color4);
+    margin-top: 6vh;
+}
+
+#gameMenu #options {
 	width: 100vw;
-	height: 60vh;
 	display: flex;
 	flex-direction: column;
 }
 
-#options div {
+#gameMenu #options div {
 	margin-bottom: var(--margin);
 }
 
-.squareButton {
+#gameMenu .squareButton {
 	width: var(--lineHeight);
 	height: var(--lineHeight);
 	border-radius: 1vw;
@@ -34,7 +40,7 @@
 	margin-right: calc(var(--margin) / 2);
 }
 
-.squareButton.active {
+#gameMenu .squareButton.active {
 	color: black;
 	background-color: var(--color1);
 }

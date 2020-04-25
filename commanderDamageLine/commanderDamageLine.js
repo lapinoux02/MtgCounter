@@ -1,7 +1,7 @@
 Vue.component('commanderDamageLine', {
 	props: ['cd'],
 	template: `<div class="line">
-		<div class="cdName">{{cd.name}}</div>
+		<div class="cdName">{{getName(cd.id)}}</div>
 		<div class="counter">
 			<div class="cdMinus" ref="cdMinus">-</div>
 			<div class="cdDamage">{{cd.damage}}</div>
@@ -20,6 +20,9 @@ Vue.component('commanderDamageLine', {
 		},
 		add5damage() {
 			this.cd.damage += 5;
+		},
+		getName(id) {
+			return PLAYERS.filter(p => p.id === id)[0].name;
 		}
 	},
 	mounted() {

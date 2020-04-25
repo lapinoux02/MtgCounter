@@ -27,7 +27,7 @@
 	/* largeur d'une tuile des cotés en disposition 3 joueurs */
 	--W_3_S: calc(100vh - 50vw - var(--M) * 1.5);
 	/* largeur d'une tuile des cotés en disposition 4 joueurs */
-	--W_4_S: calc((100vh - var(--M) * 3) / 2);
+	--W_4_S: calc(50vh - var(--M) * 1.5);
 	/* largeur d'une tuile des cotés en disposition 5 joueurs */
 	--W_5_S: calc((100vh - 50vw - var(--M) * 2.5) / 2);
 }

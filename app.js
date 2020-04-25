@@ -11,7 +11,7 @@ class Player {
 const PLAYERS = [];
 const registerPlayer = (id, name) => {
 	PLAYERS.push(new Player(id, name));
-	PLAYERS.forEach(p => Object.assign(p.commanderDamages, PLAYERS.map(pp => ({id: pp.id, name: pp.name, damage: 0}))));
+	PLAYERS.forEach(p => Object.assign(p.commanderDamages, PLAYERS.map(pp => ({id: pp.id, damage: 0}))));
 }
 
 new Vue({
@@ -19,7 +19,7 @@ new Vue({
 	data() {
 		return {
 			selectedPlayer: null,
-			vue: 'gameMenu',
+			vue: 'playersOption',
 			gameData: {
 				startingLife: 40
 			}
@@ -35,6 +35,9 @@ new Vue({
 		},
 		openGameMenu() {
 			this.vue = 'gameMenu'
+		},
+		openPlayersOption() {
+			this.vue = 'playersOption'
 		}
 	},
 	created() {

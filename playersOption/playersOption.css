@@ -1,0 +1,45 @@
+#playersOption {
+	width: 100vw;
+	height: 98vh;
+	background-color: black;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding-bottom: 2vh;
+}
+
+#playersOption #title {
+    display: flex;
+    justify-content: center;
+    font-size: var(--fontSize1);
+    color: var(--color4);
+    margin-top: 6vh;
+}
+
+#playersOption #players {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	padding-left: 8vw;
+	padding-right: 8vw;
+}
+
+#playersOption #players .playerLine {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	font-size: var(--fontSize2);
+	align-items: center;
+	margin-top: calc(var(--margin) / 2);
+	margin-bottom: calc(var(--margin) / 2);
+}
+
+#playersOption #players .playerLine .playerName {
+	margin-left: var(--margin);
+}
+
+#playersOption #players .playerLine .playerLineLeftPart {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
