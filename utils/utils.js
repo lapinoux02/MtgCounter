@@ -11,10 +11,8 @@ function addClickHandlers(el, short, long) {
 		start = new Date().getTime();
 		interval = setTimeout(() => {
 			long();
-			bzz();
 			interval = setInterval(() => {
 				long();
-				bzz();
 			}, tempo);
 		}, firstTempo);
 	});
