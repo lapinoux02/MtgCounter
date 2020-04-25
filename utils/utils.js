@@ -10,11 +10,11 @@ function addClickHandlers(el, short, long) {
 	el.addEventListener('touchstart', () => {
 		start = new Date().getTime();
 		interval = setTimeout(() => {
-			bzz();
 			long();
+			bzz();
 			interval = setInterval(() => {
-				bzz();
 				long();
+				bzz();
 			}, tempo);
 		}, firstTempo);
 	});
