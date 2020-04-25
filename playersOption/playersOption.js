@@ -23,7 +23,7 @@ Vue.component('players-option', {
 					<div class="dndIcon">⠿</div>
 					<div class="playerName">{{player.name}}</div>
 				</div>
-				<div v-on:click="rename(i)">🖉</div>
+				<div v-on:click="rename(i)">✏</div>
 			</div>
 		</div>
 		<div id="help">
