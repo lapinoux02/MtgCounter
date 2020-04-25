@@ -6,7 +6,7 @@ Vue.component('commander-damage', {
 		}
 	},
 	template: `<div id="cd">
-		<div id="title">Commander Damage</div>
+		<div id="title">Commander damage</div>
 		<div id="lines">
 			<commanderDamageLine v-for="cd in tmpData" :cd="cd" :key="cd.id"></commanderDamageLine>
 		</div>

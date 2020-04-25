@@ -19,7 +19,7 @@ new Vue({
 	data() {
 		return {
 			selectedPlayer: null,
-			vue: 'playersOption',
+			vue: 'gameMenu',
 			gameData: {
 				startingLife: 40
 			}
