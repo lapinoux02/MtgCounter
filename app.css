@@ -32,9 +32,12 @@
 	--W_5_S: calc((100vh - 50vw - var(--M) * 2.5) / 2);
 }
 
-::selection {
-    color: none;
-    background: none;
+/* désactive la sélection utilisateur */
+* {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 body {
