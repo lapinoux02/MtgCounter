@@ -5,6 +5,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	align-items: stretch;
 	padding-bottom: 2vh;
 }
 
@@ -34,12 +35,26 @@
 	margin-bottom: calc(var(--margin) / 2);
 }
 
+#playersOption #players .playerLine .dndIcon {
+	color: var(--color3);
+}
+
 #playersOption #players .playerLine .playerName {
 	margin-left: var(--margin);
+	color: var(--color2);
 }
 
 #playersOption #players .playerLine .playerLineLeftPart {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+}
+
+#playersOption #help {
+	display: flex;
+	justify-content: center;
+}
+
+#playersOption #help img {
+	width: 75vw;
 }
