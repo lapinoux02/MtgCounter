@@ -4,7 +4,7 @@ Vue.component('players-option', {
 			players: PLAYERS,
 			dragged: null,
 			draggedIndex: null,
-			img: `../ressources/${PLAYERS.length}players.png`
+			img: `./ressources/${PLAYERS.length}players.png`
 		}
 	},
 	template: `<div id="playersOption">
