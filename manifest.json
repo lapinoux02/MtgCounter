@@ -1,6 +1,6 @@
 {
-  "name": "Weather",
-  "short_name": "Weather",
+  "name": "Mais Ta Gueule Counter",
+  "short_name": "MTG Counter",
   "icons": [{
       "src": "/ressources/icon192.jpg",
       "sizes": "192x192",
