@@ -1,3 +1,7 @@
+function bzz() {
+	navigator.vibrate(500);
+}
+
 function addClickHandlers(el, short, long) {
 	let firstTempo = 1000;
 	let tempo = 500;
@@ -6,8 +10,12 @@ function addClickHandlers(el, short, long) {
 	el.addEventListener('touchstart', () => {
 		start = new Date().getTime();
 		interval = setTimeout(() => {
+			bzz();
 			long();
-			interval = setInterval(long, tempo);
+			interval = setInterval(() => {
+				bzz();
+				long();
+			}, tempo);
 		}, firstTempo);
 	});
 	el.addEventListener('touchend', () => {
@@ -15,6 +23,7 @@ function addClickHandlers(el, short, long) {
 		start = null;
 		clearInterval(interval);
 		if (diff < 1000) {
+			bzz();
 			short();
 		}
 	});
