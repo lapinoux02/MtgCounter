@@ -30,6 +30,8 @@
 	--W_4_S: calc(50vh - var(--M) * 1.5);
 	/* largeur d'une tuile des cotés en disposition 5 joueurs */
 	--W_5_S: calc((100vh - 50vw - var(--M) * 2.5) / 2);
+	/* largeur d'une tuile des cotés en disposition 4 joueurs */
+	--W_6_S: calc((100vh - var(--M) * 4) / 3);
 }
 
 /* désactive la sélection utilisateur */

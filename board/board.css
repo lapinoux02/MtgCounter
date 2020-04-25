@@ -136,6 +136,66 @@
 	left: var(--M);
 }
 
+#tile16 {
+    width: var(--W_6_S);
+    height: var(--H);
+    transform: rotate(90deg);
+    transform-origin: calc(var(--H) / 2) calc(var(--H) / 2);
+    position: absolute;
+    top: calc(var(--W_6_S) * 2 + var(--M) * 3);
+    left: var(--M);
+}
+
+#tile26 {
+    width: var(--W_6_S);
+    height: var(--H);
+    transform: rotate(90deg);
+    transform-origin: calc(var(--H) / 2) calc(var(--H) / 2);
+    position: absolute;
+    top: calc(var(--W_6_S) + var(--M) * 2);
+    left: var(--M);
+}
+
+#tile36 {
+    width: var(--W_6_S);
+    height: var(--H);
+    transform: rotate(90deg);
+    transform-origin: calc(var(--H) / 2) calc(var(--H) / 2);
+    position: absolute;
+    top: var(--M);
+    left: var(--M);
+}
+
+#tile46 {
+    width: var(--W_6_S);
+    height: var(--H);
+    transform: rotate(-90deg);
+    transform-origin: calc(var(--W_6_S) / 2) calc(var(--W_6_S) / 2);
+    position: absolute;
+    top: var(--M);
+    left: calc(var(--H) + var(--M) * 2);
+}
+
+#tile56 {
+    width: var(--W_6_S);
+    height: var(--H);
+    transform: rotate(-90deg);
+    transform-origin: calc(var(--W_6_S) / 2) calc(var(--W_6_S) / 2);
+    position: absolute;
+    top: calc(var(--W_6_S) + var(--M) * 2);
+    left: calc(var(--H) + var(--M) * 2);
+}
+
+#tile66 {
+    width: var(--W_6_S);
+    height: var(--H);
+    transform: rotate(-90deg);
+    transform-origin: calc(var(--W_6_S) / 2) calc(var(--W_6_S) / 2);
+    position: absolute;
+    top: calc(var(--W_6_S) * 2 + var(--M) * 3);
+    left: calc(var(--H) + var(--M) * 2);
+}
+
 #optionsButton {
     position: absolute;
     width: var(--lineHeight);
