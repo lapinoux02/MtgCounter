@@ -34,6 +34,9 @@ Vue.component('game-menu', {
 			// Gestion des pv
 			PLAYERS.forEach(p => p.life = this.tmpData.startingLife);
 
+			// Sauvegarde de la partie
+			MM.savePlayers(PLAYERS);
+
 			this.$emit('openboard');
 		},
 		openBoard() {

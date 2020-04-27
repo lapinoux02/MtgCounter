@@ -1,3 +1,9 @@
+if ('serviceWorker' in navigator) {
+	window.addEventListener('load', () => {
+		navigator.serviceWorker.register('/serviceWorker.js');
+	});
+}
+
 class Player {
 	constructor(id, name) {
 		this.id = id;
@@ -22,7 +28,8 @@ new Vue({
 			vue: 'gameMenu',
 			gameData: {
 				startingLife: 40
-			}
+			},
+			players: PLAYERS
 		}
 	},
 	methods: {
@@ -41,9 +48,23 @@ new Vue({
 		}
 	},
 	created() {
-		registerPlayer(0, 'Player 1');
-		registerPlayer(1, 'Player 2');
-		registerPlayer(2, 'Player 3');
-		registerPlayer(3, 'Player 4');
+		let memoryPlayers = MM.getPlayers();
+		if (memoryPlayers) {
+			PLAYERS.push(...memoryPlayers);
+			this.vue = 'board';
+		} else {
+			registerPlayer(0, 'Player 1');
+			registerPlayer(1, 'Player 2');
+			registerPlayer(2, 'Player 3');
+			registerPlayer(3, 'Player 4');
+		}
+	},
+	watch: {
+		players: {
+			deep: true,
+			handler() {
+				MM.savePlayers(PLAYERS);
+			}
+		}
 	}
 })
