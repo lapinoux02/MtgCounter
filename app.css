@@ -55,3 +55,45 @@ body {
     overflow: hidden;
     position: fixed;
 }
+
+.menu {
+	width: 100vw;
+	height: 98vh;
+	background-color: black;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding-bottom: 2vh;
+}
+
+.menu #title {
+    display: flex;
+    justify-content: center;
+    font-size: var(--fontSize1);
+    color: var(--color4);
+    margin-top: 6vh;
+}
+
+.menu #options {
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+}
+
+.menu #options div {
+	margin-bottom: var(--margin);
+}
+
+.menu #options .menuOption {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.menu #options .menuOption .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--fontSize2);
+    color: var(--color2);
+}

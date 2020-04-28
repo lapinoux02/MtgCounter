@@ -12,10 +12,11 @@ Vue.component('board', {
 			@opencommanderdamage="openCommanderDamage"
 			:key="i">
 		</playerTile>
-		<div id="optionsButton"
-			:class="getOptionsButtonClass()"
-			v-on:click="openOptions"
-		></div>
+		<optionsButton
+			@opengamemenu="openGameMenu"
+			@openplayersoption="openPlayersOption"
+			@openparametersmenu="openParametersMenu"
+		></optionsButton>
 	</div>`,
 	methods: {
 		getTileId(i) {
@@ -24,11 +25,14 @@ Vue.component('board', {
 		openCommanderDamage(e) {
 			this.$emit('opencommanderdamage', e);
 		},
-		getOptionsButtonClass() {
-			return `optionsButton${this.players.length}`;
-		},
-		openOptions() {
+		openGameMenu() {
 			this.$emit('opengamemenu');
+		},
+		openPlayersOption() {
+			this.$emit('openplayersoption');
+		},
+		openParametersMenu() {
+			this.$emit('openparametersmenu')
 		}
 	}
 })

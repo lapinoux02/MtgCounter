@@ -1,4 +1,4 @@
-const sw = 'mtg-counter-v1'
+const sw = 'mtg-counter-v2'
 const assets = [
 	'index.html',
 	'https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.js',
@@ -16,6 +16,7 @@ const assets = [
 	'/randomPlayer/randomPlayer.js',
 	'/buttonBar/buttonBar.js',
 	'/playersOption/playersOption.js',
+	'/parametersMenu/parametersMenu.js',
 	'/app.css',
 	'/board/board.css',
 	'/playerTile/playerTile.css',
@@ -27,6 +28,7 @@ const assets = [
 	'/randomPlayer/randomPlayer.css',
 	'/buttonBar/buttonBar.css',
 	'/playersOption/playersOption.css',
+	'/parametersMenu/parametersMenu.css',
 	'/ressources/2players.png',
 	'/ressources/3players.png',
 	'/ressources/4players.png',
@@ -34,10 +36,15 @@ const assets = [
 	'/ressources/6players.png',
 	'/ressources/icon192.png',
 	'/ressources/icon512.png',
-	'/ressources/options.png'
+	'/ressources/cross.png',
+	'/ressources/menu.png',
+	'/ressources/optionButton.png',
+	'/ressources/parametersButton.png',
+	'/ressources/playersButton.png'
 ];
 
 self.addEventListener('install', installEvent => {
+	self.skipWaiting();
 	installEvent.waitUntil(
 		caches.open(sw).then(cache => {
 			cache.addAll(assets);

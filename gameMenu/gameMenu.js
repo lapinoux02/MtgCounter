@@ -8,11 +8,11 @@ Vue.component('game-menu', {
 			}
 		}
 	},
-	template: `<div id="gameMenu">
+	template: `<div id="gameMenu" class="menu">
 		<div id="title">Menu</div>
 		<div id="options">
 			<startingLife :gameData="tmpData"></startingLife>
-			<playersManager :gameData="tmpData" @openplayersoption="openPlayersOption"></playersManager>
+			<playersManager :gameData="tmpData"></playersManager>
 			<randomPlayer></randomPlayer>
 		</div>
 		<buttonBar :primary="startNewGame" :secondary="openBoard" :secondaryText="'Cancel'" :primaryText="'START'"></buttonBar>
@@ -41,9 +41,6 @@ Vue.component('game-menu', {
 		},
 		openBoard() {
 			this.$emit('openboard');
-		},
-		openPlayersOption() {
-			this.$emit('openplayersoption');
 		}
 	}
 })

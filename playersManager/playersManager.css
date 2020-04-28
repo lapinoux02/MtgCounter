@@ -1,17 +1,3 @@
-#playersManager {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-#playersManager .title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: var(--fontSize2);
-    color: var(--color2);
-}
-
 #playersManager .buttonsLine {
 	display: flex;
 	flex-direction: row;

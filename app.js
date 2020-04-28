@@ -20,6 +20,10 @@ const registerPlayer = (id, name) => {
 	PLAYERS.forEach(p => Object.assign(p.commanderDamages, PLAYERS.map(pp => ({id: pp.id, damage: 0}))));
 }
 
+const CONF = {
+	vibrations: true
+}
+
 new Vue({
 	el: '#app',
 	data() {
@@ -41,10 +45,13 @@ new Vue({
 			this.vue = 'board';
 		},
 		openGameMenu() {
-			this.vue = 'gameMenu'
+			this.vue = 'gameMenu';
 		},
 		openPlayersOption() {
-			this.vue = 'playersOption'
+			this.vue = 'playersOption';
+		},
+		openParametersMenu() {
+			this.vue = 'parametersMenu';
 		}
 	},
 	created() {

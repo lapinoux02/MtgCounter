@@ -1,5 +1,12 @@
-#gameMenu .squareButton {
-	width: var(--lineHeight);
+#parametersMenu #options #vibrationOption .buttonsLine {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: var(--margin);
+}
+
+#parametersMenu .rectButton {
+	width: calc(var(--lineHeight) * 1.5);
 	height: var(--lineHeight);
 	border-radius: 1vw;
 	border: var(--border) solid var(--color1);
@@ -12,7 +19,7 @@
 	margin-right: calc(var(--margin) / 2);
 }
 
-#gameMenu .squareButton.active {
+#parametersMenu .rectButton.active {
 	color: black;
 	background-color: var(--color1);
 }

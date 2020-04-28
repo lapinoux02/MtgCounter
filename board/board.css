@@ -195,27 +195,3 @@
     top: calc(var(--W_6_S) * 2 + var(--M) * 3);
     left: calc(var(--H) + var(--M) * 2);
 }
-
-#optionsButton {
-    position: absolute;
-    width: var(--lineHeight);
-    height: var(--lineHeight);
-    background-image: url(../ressources/options.png);
-    border: var(--border) solid var(--color1);
-    border-radius: var(--lineHeight);
-    z-index: 1;
-    background-size: var(--lineHeight) var(--lineHeight);
-    left: calc(50vw - var(--lineHeight) / 2 - var(--border));
-}
-
-#optionsButton.optionsButton2, #optionsButton.optionsButton4, #optionsButton.optionsButton6 {
-    top: calc(50vh - var(--lineHeight) / 2 - var(--border));
-}
-
-#optionsButton.optionsButton3 {
-    top: calc(var(--W_3_S) + var(--M) * 1.5 - var(--lineHeight) / 2 - var(--border));
-}
-
-#optionsButton.optionsButton5 {
-    top: calc(var(--W_5_S) + var(--M) * 1.5 - var(--lineHeight) / 2 - var(--border));
-}

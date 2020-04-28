@@ -1,5 +1,7 @@
 function bzz() {
-	navigator.vibrate(50);
+	if (CONF.vibrations) {
+		navigator.vibrate(50);
+	}
 }
 
 function addClickHandlers(el, short, long) {

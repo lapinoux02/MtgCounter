@@ -9,7 +9,7 @@ Vue.component('randomPlayer', {
 			return this.chosenOne || 'Click me';
 		}
 	},
-	template: `<div id="randomPlayer">
+	template: `<div id="randomPlayer" class="menuOption">
 		<div class="title">Random Player</div>
 		<div class="randomButton" v-on:click="choose">{{randomPlayer}}</div>
 	</div>`,

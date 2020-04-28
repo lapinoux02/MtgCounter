@@ -5,8 +5,8 @@ Vue.component('playersManager', {
 			players: PLAYERS
 		}
 	},
-	template: `<div id="playersManager">
-		<div class="title">Players<span id="playersOptionButton" v-on:click="openPlayersOption">✎</span></div>
+	template: `<div id="playersManager" class="menuOption">
+		<div class="title">Players</div>
 		<div class="buttonsLine">
 			<div class="squareButton" v-on:click="select(2)" :class="getClass(2)">2</div>
 			<div class="squareButton" v-on:click="select(3)" :class="getClass(3)">3</div>
@@ -21,9 +21,6 @@ Vue.component('playersManager', {
 		},
 		select(num) {
 			this.gameData.playerNumber = num;
-		},
-		openPlayersOption() {
-			this.$emit('openplayersoption')
 		}
 	}
 })

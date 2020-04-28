@@ -1,22 +1,3 @@
-#playersOption {
-	width: 100vw;
-	height: 98vh;
-	background-color: black;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: stretch;
-	padding-bottom: 2vh;
-}
-
-#playersOption #title {
-    display: flex;
-    justify-content: center;
-    font-size: var(--fontSize1);
-    color: var(--color4);
-    margin-top: 6vh;
-}
-
 #playersOption #players {
 	display: flex;
 	flex-direction: column;

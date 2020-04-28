@@ -7,7 +7,7 @@ Vue.component('players-option', {
 			img: `./ressources/${PLAYERS.length}players.png`
 		}
 	},
-	template: `<div id="playersOption">
+	template: `<div id="playersOption" class="menu">
 		<div id="title">Players</div>
 		<div id="players">
 			<div v-for="(player, i) in players"
@@ -43,7 +43,7 @@ Vue.component('players-option', {
 			this.players[i].name = prompt(`Rename ${this.players[i].name}`) || this.players[i].name;
 		},
 		cancel() {
-			this.$emit('opengamemenu');
+			this.$emit('openboard');
 		}
 	}
 })

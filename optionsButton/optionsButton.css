@@ -1,0 +1,89 @@
+:root {
+	--toggleButtonSize: var(--lineHeight);
+	--optionsSize: calc(var(--lineHeight) * 4 + var(--border) * 4);
+	--openTopPos: calc(var(--toggleButtonSize) / 2 - var(--optionsSize) / 2);
+	--openLeftPos: calc(var(--toggleButtonSize) / 2 - var(--optionsSize) / 2);
+}
+
+#optionsButton {
+	position: absolute;
+	z-index: 1;
+	left: calc(50vw - var(--toggleButtonSize) / 2 - var(--border));
+}
+
+#optionsButton.toggle2, #optionsButton.toggle4, #optionsButton.toggle6 {
+	top: calc(50vh - var(--toggleButtonSize) / 2 - var(--border));
+}
+
+#optionsButton.toggle3 {
+	top: calc(var(--W_3_S) + var(--M) * 1.5 - var(--toggleButtonSize) / 2 + var(--border) * 2);
+}
+
+#optionsButton.toggle5 {
+	top: calc(var(--W_5_S) + var(--M) * 1.5 - var(--toggleButtonSize) / 2 + var(--border) * 2);
+}
+
+#optionsButton #optionToggle {
+	width: var(--toggleButtonSize);
+	height: var(--toggleButtonSize);
+	border: var(--border) solid var(--color1);
+	border-radius: var(--toggleButtonSize);
+}
+
+#optionsButton.closed #optionToggle {
+	background-image: url(../ressources/menu.png);
+	background-size: 100%;
+	background-color: black;
+}
+
+#optionsButton.open #optionToggle {
+	background-image: url(../ressources/cross.png);
+	background-size: 100%;
+	background-color: black;
+}
+
+#optionsButton #options {
+	position: absolute;
+	z-index: -1;
+	transition-property: top, left, width, height;
+	transition-duration: 0.1s;
+	background: var(--color3);
+	border-radius: var(--optionsSize);
+	border: var(--border) solid var(--color1);
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#optionsButton.open #options {
+	top: var(--openTopPos);
+	left: var(--openLeftPos);
+	width: var(--optionsSize);
+	height: var(--optionsSize);
+}
+
+#optionsButton.closed #options {
+	top: 0px;
+	left: 0px;
+	width: var(--toggleButtonSize);
+	height: var(--toggleButtonSize);
+}
+
+#optionsButton #options .option {
+	width: 50%;
+	height: 50%;
+}
+
+#optionsButton #options .option.optionsMenu {
+	background-image: url("../ressources/optionButton.png");
+	background-size: 100%;
+}
+
+#optionsButton #options .option.optionsPlayer {
+	background-image: url("../ressources/playersButton.png");
+	background-size: 100%;
+}
+
+#optionsButton #options .option.optionsParameters {
+	background-image: url("../ressources/parametersButton.png");
+	background-size: 100%;
+}

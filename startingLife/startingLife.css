@@ -1,16 +1,3 @@
-#startingLife {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-#startingLife .title {
-    display: flex;
-    justify-content: center;
-    font-size: var(--fontSize2);
-    color: var(--color2);
-}
-
 #startingLife .buttonsLine {
 	display: flex;
 	flex-direction: row;

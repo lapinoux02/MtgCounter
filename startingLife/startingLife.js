@@ -1,6 +1,6 @@
 Vue.component('startingLife', {
 	props: ['gameData'],
-	template: `<div id="startingLife">
+	template: `<div id="startingLife" class="menuOption">
 		<div class="title">Starting life</div>
 		<div class="buttonsLine">
 			<div ref="remove10" class="squareButton"><<</div>
