@@ -16,11 +16,11 @@
 }
 
 #optionsButton.toggle3 {
-	top: calc(var(--W_3_S) + var(--M) * 1.5 - var(--toggleButtonSize) / 2 + var(--border) * 2);
+	top: calc(var(--W_3_S) + var(--M) * 1.5 - var(--toggleButtonSize) / 2 - var(--border));
 }
 
 #optionsButton.toggle5 {
-	top: calc(var(--W_5_S) + var(--M) * 1.5 - var(--toggleButtonSize) / 2 + var(--border) * 2);
+	top: calc(var(--W_5_S) + var(--M) * 1.5 - var(--toggleButtonSize) / 2 - var(--border));
 }
 
 #optionsButton #optionToggle {
