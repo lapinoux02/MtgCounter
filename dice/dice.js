@@ -4,7 +4,7 @@ Vue.component('dice', {
 			number: Math.floor(Math.random()*6) + 1
 		}
 	},
-	template: `<div class="dice" v-on:click="roll">
+	template: `<div ref="dice" class="dice" v-on:click="roll">
 		<div class="diceSideCol">
 			<div :class="{dot: true, on: number !== 1}"></div>
 			<div :class="{dot: true, on: number === 6}"></div>
@@ -21,7 +21,11 @@ Vue.component('dice', {
 	</div>`,
 	methods: {
 		roll() {
-			this.number = Math.floor(Math.random()*6) + 1;
+			this.$refs.dice.classList.add('rolling');
+			setTimeout(() => {
+				this.$refs.dice.classList.remove('rolling');
+				this.number = Math.floor(Math.random()*6) + 1;
+			}, 100);
 		}
 	}
 })

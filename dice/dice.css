@@ -6,6 +6,7 @@
 }
 
 .dice {
+	position: absolute;
 	width: var(--diceSize);
 	height: var(--diceSize);
 	border: var(--border) solid var(--diceColor);
@@ -14,6 +15,15 @@
 	flex-direction: row;
 	padding: var(--diceMargin);
 	justify-content: space-between;
+	transition-property: all;
+	transition-duration: 0.1s;
+}
+
+.dice.rolling {
+	width: 0px;
+	height: 0px;
+	margin-top: calc(50% - var(--border) - var(--diceMargin));
+	margin-left: calc(50% - var(--border) - var(--diceMargin));
 }
 
 .dice .diceSideCol {
