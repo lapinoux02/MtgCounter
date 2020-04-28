@@ -73,17 +73,29 @@
 	height: 50%;
 }
 
-#optionsButton #options .option.optionsMenu {
+#optionsButton #options .option#dice {
+    width: 24%;
+    height: 24%;
+    padding: 13%;
+}
+
+#optionsButton #options .option#dice #diceHolder {
+	width: 80%;
+	height: 80%;
+	transform: rotate(45deg);
+}
+
+#optionsButton #options .option#optionsMenu {
 	background-image: url("../ressources/optionButton.png");
 	background-size: 100%;
 }
 
-#optionsButton #options .option.optionsPlayer {
+#optionsButton #options .option#optionsPlayer {
 	background-image: url("../ressources/playersButton.png");
 	background-size: 100%;
 }
 
-#optionsButton #options .option.optionsParameters {
+#optionsButton #options .option#optionsParameters {
 	background-image: url("../ressources/parametersButton.png");
 	background-size: 100%;
 }

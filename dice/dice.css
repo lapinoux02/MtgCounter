@@ -1,0 +1,42 @@
+:root {
+	--diceSize: calc((100% - var(--border) * 2) * 5 / 6);
+	--dotSize: calc(var(--diceSize) / 4);
+	--diceMargin: calc(var(--diceSize) / 10);
+	--diceColor: var(--color1);
+}
+
+.dice {
+	width: var(--diceSize);
+	height: var(--diceSize);
+	border: var(--border) solid var(--diceColor);
+	border-radius: 1vw;
+	display: flex;
+	flex-direction: row;
+	padding: var(--diceMargin);
+	justify-content: space-between;
+}
+
+.dice .diceSideCol {
+	width: var(--dotSize);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.dice .diceMidCol {
+	width: var(--dotSize);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.dice .dot {
+	width: 100%;
+	padding-top: 100%;
+	border-radius: 100vw;
+	background-color: rgba(0,0,0,0);
+}
+
+.dice .dot.on {
+	background-color: var(--diceColor);
+}

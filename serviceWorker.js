@@ -1,4 +1,4 @@
-const sw = 'mtg-counter-v2'
+const sw = 'mtg-counter-v3'
 const assets = [
 	'index.html',
 	'https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.js',
@@ -17,6 +17,7 @@ const assets = [
 	'/buttonBar/buttonBar.js',
 	'/playersOption/playersOption.js',
 	'/parametersMenu/parametersMenu.js',
+	'/dice/dice.js',
 	'/app.css',
 	'/board/board.css',
 	'/playerTile/playerTile.css',
@@ -29,6 +30,7 @@ const assets = [
 	'/buttonBar/buttonBar.css',
 	'/playersOption/playersOption.css',
 	'/parametersMenu/parametersMenu.css',
+	'/dice/dice.css',
 	'/ressources/2players.png',
 	'/ressources/3players.png',
 	'/ressources/4players.png',
