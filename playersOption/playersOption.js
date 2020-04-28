@@ -26,6 +26,9 @@ Vue.component('players-option', {
 				<div v-on:click="rename(i)">✎</div>
 			</div>
 		</div>
+		<div id="options">
+			<randomPlayer></randomPlayer>
+		</div>
 		<div id="help">
 			<img :src="img">
 		</div>

@@ -13,7 +13,6 @@ Vue.component('game-menu', {
 		<div id="options">
 			<startingLife :gameData="tmpData"></startingLife>
 			<playersManager :gameData="tmpData"></playersManager>
-			<randomPlayer></randomPlayer>
 		</div>
 		<buttonBar :primary="startNewGame" :secondary="openBoard" :secondaryText="'Cancel'" :primaryText="'START'"></buttonBar>
 	</div>`,
