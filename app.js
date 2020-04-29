@@ -1,9 +1,11 @@
+// Gestion service worker
 if ('serviceWorker' in navigator) {
 	window.addEventListener('load', () => {
 		navigator.serviceWorker.register('/serviceWorker.js');
 	});
 }
 
+// Gestion joueurs
 class Player {
 	constructor(id, name) {
 		this.id = id;
@@ -20,6 +22,7 @@ const registerPlayer = (id, name) => {
 	PLAYERS.forEach(p => Object.assign(p.commanderDamages, PLAYERS.map(pp => ({id: pp.id, damage: 0}))));
 }
 
+// Gestion configuration globale
 const CONF = {
 	vibrations: true
 }
@@ -37,33 +40,41 @@ new Vue({
 		}
 	},
 	methods: {
-		openCommanderDamage(player) {
+		goto(vue) {
 			bzz();
+			this.vue = vue;
+			if (vue !== 'board') {
+				history.pushState(null, window.location.href);
+			}
+		},
+		openCommanderDamage(player) {
 			this.selectedPlayer = player;
-			this.vue = 'commanderDamage';
+			this.goto('commanderDamage');
 		},
 		openBoard() {
-			bzz();
-			this.vue = 'board';
+			this.goto('board');
 		},
 		openGameMenu() {
-			bzz();
-			this.vue = 'gameMenu';
+			this.goto('gameMenu');
 		},
 		openPlayersOption() {
-			bzz();
-			this.vue = 'playersOption';
+			this.goto('playersOption');
 		},
 		openParametersMenu() {
-			bzz();
-			this.vue = 'parametersMenu';
+			this.goto('parametersMenu');
 		}
 	},
 	created() {
+		// Gestion historique (back button)
+		window.onpopstate = () => {
+			this.vue = 'board';
+		}
+
+		// Création des joueurs
 		let memoryPlayers = MM.getPlayers();
 		if (memoryPlayers) {
 			PLAYERS.push(...memoryPlayers);
-			this.vue = 'board';
+			this.goto('board');
 		} else {
 			registerPlayer(0, 'Player 1');
 			registerPlayer(1, 'Player 2');
