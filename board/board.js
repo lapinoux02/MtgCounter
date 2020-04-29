@@ -9,9 +9,11 @@ Vue.component('board', {
 			v-for="(player, i) in players"
 			:player="player"
 			:id="getTileId(i)"
+			:key="i"
 			@opencommanderdamage="openCommanderDamage"
-			:key="i">
-		</playerTile>
+			@dragstart="dragStart(player, i)"
+			@drop="drop(i)"
+		></playerTile>
 		<optionsButton
 			@opengamemenu="openGameMenu"
 			@openplayersoption="openPlayersOption"
@@ -33,6 +35,14 @@ Vue.component('board', {
 		},
 		openParametersMenu() {
 			this.$emit('openparametersmenu')
+		},
+		dragStart(player, i) {
+			this.dragged = player;
+			this.draggedIndex = i;
+		},
+		drop(i) {
+			bzz();
+			this.players.splice(this.draggedIndex, 1, ...this.players.splice(i, 1, this.dragged))
 		}
 	}
 })

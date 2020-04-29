@@ -5,7 +5,12 @@ Vue.component('playerTile', {
 			return Math.max(...this.player.commanderDamages.map(cd => cd.damage));
 		}
 	},
-	template: `<div class="playerTile">
+	template: `<div class="playerTile"
+			draggable
+			droppable
+			ondragover="event.preventDefault()"
+			@dragstart="dragStart"
+			@drop="drop">
 		<div class="mainCounter">
 			<div ref="lifeMinus" class="lifeMinus">-</div>
 			<div ref="lifePlus" class="lifePlus">+</div>
@@ -48,6 +53,16 @@ Vue.component('playerTile', {
 		},
 		openCommanderDamage() {
 			this.$emit('opencommanderdamage', this.player);
+		},
+		dragStart(player, i) {
+			this.$refs.lifeMinus.stopClick();
+			this.$refs.lifePlus.stopClick();
+			this.$refs.poisonMinus.stopClick();
+			this.$refs.poisonPlus.stopClick();
+			this.$emit('dragstart');
+		},
+		drop(i) {
+			this.$emit('drop');
 		}
 	},
 	mounted() {

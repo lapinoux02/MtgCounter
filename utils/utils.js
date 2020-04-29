@@ -29,4 +29,8 @@ function addClickHandlers(el, short, long) {
 			bzz();
 		}
 	});
+	el.stopClick = () => {
+		clearInterval(interval);
+		start = null;
+	}
 }
