@@ -23,6 +23,7 @@ Vue.component('optionsButton', {
 	</div>`,
 	methods: {
 		toggle() {
+			bzz();
 			this.open = !this.open;
 		},
 		openGameMenu() {

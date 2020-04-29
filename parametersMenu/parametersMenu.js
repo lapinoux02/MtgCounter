@@ -19,6 +19,7 @@ Vue.component('parameters-menu', {
 	</div>`,
 	methods: {
 		select(val) {
+			bzz();
 			this.vibrations = val;
 		},
 		getClass(val) {

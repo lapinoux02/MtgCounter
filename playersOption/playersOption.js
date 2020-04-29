@@ -32,7 +32,7 @@ Vue.component('players-option', {
 		<div id="help">
 			<img :src="img">
 		</div>
-		<buttonBar :secondary="cancel"></buttonBar>
+		<buttonBar :secondary="back"></buttonBar>
 	</div>`,
 	methods: {
 		dragStart(player, i) {
@@ -40,12 +40,14 @@ Vue.component('players-option', {
 			this.draggedIndex = i;
 		},
 		drop(i) {
+			bzz();
 			this.players.splice(this.draggedIndex, 1, ...this.players.splice(i, 1, this.dragged))
 		},
 		rename(i) {
+			bzz();
 			this.players[i].name = prompt(`Rename ${this.players[i].name}`) || this.players[i].name;
 		},
-		cancel() {
+		back() {
 			this.$emit('openboard');
 		}
 	}

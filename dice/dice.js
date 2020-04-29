@@ -21,6 +21,7 @@ Vue.component('dice', {
 	</div>`,
 	methods: {
 		roll() {
+			bzz();
 			this.$refs.dice.classList.add('rolling');
 			setTimeout(() => {
 				this.$refs.dice.classList.remove('rolling');

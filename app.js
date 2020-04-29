@@ -38,19 +38,24 @@ new Vue({
 	},
 	methods: {
 		openCommanderDamage(player) {
+			bzz();
 			this.selectedPlayer = player;
 			this.vue = 'commanderDamage';
 		},
 		openBoard() {
+			bzz();
 			this.vue = 'board';
 		},
 		openGameMenu() {
+			bzz();
 			this.vue = 'gameMenu';
 		},
 		openPlayersOption() {
+			bzz();
 			this.vue = 'playersOption';
 		},
 		openParametersMenu() {
+			bzz();
 			this.vue = 'parametersMenu';
 		}
 	},

@@ -20,6 +20,7 @@ Vue.component('playersManager', {
 			return this.gameData.playerNumber === num ? 'active' : '';
 		},
 		select(num) {
+			bzz();
 			this.gameData.playerNumber = num;
 		}
 	}

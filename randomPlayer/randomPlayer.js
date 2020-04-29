@@ -15,6 +15,7 @@ Vue.component('randomPlayer', {
 	</div>`,
 	methods: {
 		choose() {
+			bzz();
 			this.chosenOne = PLAYERS[Math.floor(Math.random() * PLAYERS.length)].name
 		}
 	}
