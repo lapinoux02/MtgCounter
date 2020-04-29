@@ -31,7 +31,11 @@ Vue.component('game-menu', {
 			}
 
 			// Gestion des pv
-			PLAYERS.forEach(p => p.life = this.tmpData.startingLife);
+			PLAYERS.forEach(p => {
+				p.life = this.tmpData.startingLife
+				p.poisonDamage = 0;
+				p.commanderDamages = PLAYERS.map(pp => ({id: pp.id, damage: 0}));
+			});
 
 			// Sauvegarde de la partie
 			MM.savePlayers(PLAYERS);
