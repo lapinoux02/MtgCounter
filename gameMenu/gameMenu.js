@@ -38,7 +38,7 @@ Vue.component('game-menu', {
 			});
 
 			// Sauvegarde de la partie
-			MM.savePlayers(PLAYERS);
+			MM.savePlayers();
 
 			this.$emit('openboard');
 		},

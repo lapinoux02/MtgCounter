@@ -34,3 +34,25 @@ function addClickHandlers(el, short, long) {
 		start = null;
 	}
 }
+
+let WAKE_LOCK = null;
+async function wakeLock() {
+	CONF.keepScreenAlive = true;
+	if ('wakeLock' in navigator) {
+		WAKE_LOCK = await navigator.wakeLock.request('screen');
+	} else if ('keepAwake' in screen) {
+		screen.keepAwake = true;
+	}
+}
+
+function wakeUnlock() {
+	CONF.keepScreenAlive = false;
+	if ('wakeLock' in navigator) {
+		if (WAKE_LOCK) {
+			WAKE_LOCK.release();
+			WAKE_LOCK = null;
+		}
+	} else if ('keepAwake' in screen) {
+		screen.keepAwake = false;
+	}
+}

@@ -1,4 +1,4 @@
-#parametersMenu #options #vibrationOption .buttonsLine {
+#parametersMenu #options .buttonsLine {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;

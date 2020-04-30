@@ -15,16 +15,17 @@ class Player {
 		this.commanderDamages = [];
 	}
 }
-
-const PLAYERS = [];
 const registerPlayer = (id, name) => {
 	PLAYERS.push(new Player(id, name));
 	PLAYERS.forEach(p => Object.assign(p.commanderDamages, PLAYERS.map(pp => ({id: pp.id, damage: 0}))));
 }
 
+const PLAYERS = [];
+
 // Gestion configuration globale
 const CONF = {
-	vibrations: true
+	vibrations: true,
+	keepScreenAlive: true
 }
 
 new Vue({
@@ -71,22 +72,24 @@ new Vue({
 		}
 
 		// Création des joueurs
-		let memoryPlayers = MM.getPlayers();
-		if (memoryPlayers) {
-			PLAYERS.push(...memoryPlayers);
-			this.goto('board');
+		if (MM.loadPlayers()) {
+			this.vue = 'board';
 		} else {
 			registerPlayer(0, 'Player 1');
 			registerPlayer(1, 'Player 2');
 			registerPlayer(2, 'Player 3');
 			registerPlayer(3, 'Player 4');
 		}
+
+		// Gestion de la conf
+		MM.loadConf();
+		CONF.keepScreenAlive ? wakeLock() : wakeUnlock();
 	},
 	watch: {
 		players: {
 			deep: true,
 			handler() {
-				MM.savePlayers(PLAYERS);
+				MM.savePlayers();
 			}
 		}
 	}

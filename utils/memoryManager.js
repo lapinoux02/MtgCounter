@@ -1,8 +1,22 @@
 let MM = {
-	savePlayers: (players) => {
-		localStorage.setItem('players', JSON.stringify(players));
+	savePlayers: () => {
+		localStorage.setItem('players', JSON.stringify(PLAYERS));
 	},
-	getPlayers: () => {
-		return JSON.parse(localStorage.getItem('players'));
+	loadPlayers: () => {
+		let memoryPlayers = JSON.parse(localStorage.getItem('players'));
+		if (memoryPlayers) {
+			PLAYERS.push(...memoryPlayers);
+			return true;
+		}
+	},
+	saveConf: () => {
+		localStorage.setItem('conf', JSON.stringify(CONF));
+	},
+	loadConf: () => {
+		let memoryConf = JSON.parse(localStorage.getItem('conf'));
+		if (memoryConf) {
+			Object.assign(CONF, memoryConf);
+			return true;
+		}
 	}
 }
