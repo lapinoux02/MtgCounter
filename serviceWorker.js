@@ -1,4 +1,4 @@
-const sw = 'mtg-counter-v4'
+const sw = 'mtg-counter-v5'
 const assets = [
 	'index.html',
 	'https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.js',

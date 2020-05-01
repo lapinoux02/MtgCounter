@@ -46,6 +46,8 @@ new Vue({
 			this.vue = vue;
 			if (vue !== 'board') {
 				history.pushState(null, window.location.href);
+			} else {
+				history.back();
 			}
 		},
 		openCommanderDamage(player) {
