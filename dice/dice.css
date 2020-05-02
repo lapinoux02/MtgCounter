@@ -1,11 +1,8 @@
-:root {
+.dice {
 	--diceSize: calc((100% - var(--border) * 2) * 5 / 6);
 	--dotSize: calc(var(--diceSize) / 4);
 	--diceMargin: calc(var(--diceSize) / 10);
 	--diceColor: var(--color1);
-}
-
-.dice {
 	position: absolute;
 	width: var(--diceSize);
 	height: var(--diceSize);

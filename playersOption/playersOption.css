@@ -14,6 +14,7 @@
 	align-items: center;
 	margin-top: calc(var(--margin) / 2);
 	margin-bottom: calc(var(--margin) / 2);
+	color: var(--color1);
 }
 
 #playersOption #players .playerLine .dndIcon {

@@ -8,4 +8,5 @@
 	border: var(--border) solid var(--color1);
 	border-radius: 1vw;
 	font-size: var(--fontSize2);
+	color: var(--color1);
 }

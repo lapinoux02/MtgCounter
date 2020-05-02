@@ -20,6 +20,6 @@
 }
 
 #parametersMenu .rectButton.active {
-	color: black;
+	color: var(--background);
 	background-color: var(--color1);
 }

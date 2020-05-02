@@ -1,10 +1,11 @@
 :root {
-	--color1: #eac814;
-	--color2: #898c68;
-	--color3: #353333;
-	--color4: #dedede;
-	--grad1: linear-gradient(black, #802e2e);
-	--grad2: linear-gradient(black, #1a4c18);
+	--yellow: #eac814;
+	--lightGrey: #898c68;
+	--darkGrey: #353333;
+	--silver: #dedede;
+	--black: black;
+	--red: #802e2e;
+	--green: #1a4c18;
 	--fontSize1: 7vw;
 	--fontSize2: 6vw;
 	/* hauteur d'une ligne de menus */
@@ -44,8 +45,6 @@
 
 body {
 	margin: 0px;
-	background-color: var(--color1);
-	color: var(--color1);
 	font-family: Arial, sans-serif;
 	font-weight: bold;
 	overscroll-behavior-y: contain;
@@ -54,12 +53,33 @@ body {
 #app {
     overflow: hidden;
     position: fixed;
+    background-color: var(--color1);
+}
+
+#app.dark {
+	--color1: var(--yellow);
+	--color2: var(--lightGrey);
+	--color3: var(--darkGrey);
+	--color4: var(--silver);
+	--background: var(--black);
+	--grad1: linear-gradient(var(--background), var(--red));
+	--grad2: linear-gradient(var(--background), var(--green));
+}
+
+#app.light {
+	--color1: #3e6871;
+    --color2: #2978A0;
+    --color3: #98c2da;
+    --color4: #14213D;
+    --background: #ececec;
+    --grad1: linear-gradient(var(--background), #617ee8);
+    --grad2: linear-gradient(var(--background), #d59bf2);
 }
 
 .menu {
 	width: 100vw;
 	height: 98vh;
-	background-color: black;
+	background-color: var(--background);
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;

@@ -5,7 +5,7 @@
 	flex-direction: column;
 	align-items: stretch;
 	justify-content: space-between;
-	background-color: black;
+	background-color: var(--background);
 }
 
 #cd #title {

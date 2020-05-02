@@ -25,7 +25,8 @@ const PLAYERS = [];
 // Gestion configuration globale
 const CONF = {
 	vibrations: true,
-	keepScreenAlive: true
+	keepScreenAlive: true,
+	theme: 'dark'
 }
 
 new Vue({
@@ -37,7 +38,8 @@ new Vue({
 			gameData: {
 				startingLife: 40
 			},
-			players: PLAYERS
+			players: PLAYERS,
+			conf: CONF
 		}
 	},
 	methods: {

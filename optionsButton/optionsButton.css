@@ -1,11 +1,8 @@
-:root {
+#optionsButton {
 	--toggleButtonSize: var(--lineHeight);
 	--optionsSize: calc(var(--lineHeight) * 4 + var(--border) * 4);
 	--openTopPos: calc(var(--toggleButtonSize) / 2 - var(--optionsSize) / 2);
 	--openLeftPos: calc(var(--toggleButtonSize) / 2 - var(--optionsSize) / 2);
-}
-
-#optionsButton {
 	position: absolute;
 	z-index: 1;
 	left: calc(50vw - var(--toggleButtonSize) / 2 - var(--border));
@@ -30,7 +27,7 @@
 	border: var(--border) solid var(--color1);
 	border-radius: var(--toggleButtonSize);
 	font-size: var(--lineHeight);
-	background-color: black;
+	background-color: var(--background);
 }
 
 #optionsButton #options {

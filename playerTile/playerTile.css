@@ -1,4 +1,4 @@
-:root {
+.playerTile {
 	/* hauteur des boutons annexes */
 	--H_A: calc(10vw);
 	/* hauteur du cadre principal */
@@ -7,14 +7,11 @@
 	--H_N: 8vw;
 	/* rayon des coins de la tuile */
 	--B_R: 3vw;
-}
-
-.playerTile {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: stretch;
-	background-color: black;
+	background-color: var(--background);
 	border-radius: var(--B_R);
 }
 
@@ -68,6 +65,7 @@
 	top: var(--H_N);
 	left: 0px;
 	text-align: center;
+	color: var(--color1);
 }
 
 .playerTile .mainCounter .playerName {
