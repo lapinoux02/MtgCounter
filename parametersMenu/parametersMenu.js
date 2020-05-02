@@ -1,9 +1,11 @@
 Vue.component('parameters-menu', {
 	data() {
 		return {
+			conf: CONF,
 			vibrations: CONF.vibrations,
 			keepScreenAlive: CONF.keepScreenAlive,
-			showKeepAwake: 'wakeLock' in navigator || 'keepAwake' in screen
+			showKeepAwake: 'wakeLock' in navigator || 'keepAwake' in screen,
+			theme: CONF.theme
 		}
 	},
 	template: `<div id="parametersMenu" class="menu">
@@ -23,6 +25,13 @@ Vue.component('parameters-menu', {
 					<div class="rectButton" v-on:click="selectWakeLock(true)" :class="{active: keepScreenAlive}">YES</div>
 				</div>
 			</div>
+			<div id="theme" class="menuOption">
+				<div class="title">Theme</div>
+				<div class="buttonsLine">
+					<div class="rectButton" v-on:click="selectTheme('dark')" :class="{active: conf.theme === 'dark'}">Dark</div>
+					<div class="rectButton" v-on:click="selectTheme('light')" :class="{active: conf.theme === 'light'}">Light</div>
+				</div>
+			</div>
 		</div>
 		<buttonBar :primary="validate" :secondary="cancel" :secondaryText="'Cancel'"></buttonBar>
 	</div>`,
@@ -35,6 +44,10 @@ Vue.component('parameters-menu', {
 			bzz();
 			this.keepScreenAlive = val;
 		},
+		selectTheme(val) {
+			bzz();
+			CONF.theme = val;
+		},
 		validate() {
 			// Gestion des vibrations
 			CONF.vibrations = this.vibrations;
@@ -46,6 +59,9 @@ Vue.component('parameters-menu', {
 			this.$emit('openboard');
 		},
 		cancel() {
+			// Gestion du thème
+			CONF.theme = this.theme;
+
 			this.$emit('openboard');
 		}
 	}

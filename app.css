@@ -65,8 +65,8 @@ body {
     --color3: #98c2da;
     --color4: #14213D;
     --background: #ececec;
-    --grad1: linear-gradient(var(--background), #617ee8);
-    --grad2: linear-gradient(var(--background), #d59bf2);
+	--grad1: linear-gradient(var(--background), #d8bfbf);
+	--grad2: linear-gradient(var(--background), #aac5a8);
 }
 
 .menu {
