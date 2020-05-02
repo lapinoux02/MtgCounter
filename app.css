@@ -69,6 +69,16 @@ body {
 	--grad2: linear-gradient(var(--background), #aac5a8);
 }
 
+#app.flat {
+	--color1: white;
+    --color2: #f9a825;
+    --color3: #cfcfcf;
+    --color4: white;
+    --background: #484848;
+	--grad1: linear-gradient(var(--background), #af4448);
+	--grad2: linear-gradient(var(--background), #2e7d32);
+}
+
 .menu {
 	width: 100vw;
 	height: 98vh;
