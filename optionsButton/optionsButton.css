@@ -9,6 +9,7 @@
 	position: absolute;
 	z-index: 1;
 	left: calc(50vw - var(--toggleButtonSize) / 2 - var(--border));
+	color: var(--color1);
 }
 
 #optionsButton.toggle2, #optionsButton.toggle4, #optionsButton.toggle6 {
@@ -28,17 +29,7 @@
 	height: var(--toggleButtonSize);
 	border: var(--border) solid var(--color1);
 	border-radius: var(--toggleButtonSize);
-}
-
-#optionsButton.closed #optionToggle {
-	background-image: url(../ressources/menu.png);
-	background-size: 100%;
-	background-color: black;
-}
-
-#optionsButton.open #optionToggle {
-	background-image: url(../ressources/cross.png);
-	background-size: 100%;
+	font-size: var(--lineHeight);
 	background-color: black;
 }
 
@@ -71,6 +62,7 @@
 #optionsButton #options .option {
 	width: 50%;
 	height: 50%;
+	font-size: 50%;
 }
 
 #optionsButton #options .option#dice {
@@ -82,20 +74,37 @@
 #optionsButton #options .option#dice #diceHolder {
 	width: 80%;
 	height: 80%;
-	transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
-#optionsButton #options .option#optionsMenu {
-	background-image: url("../ressources/optionButton.png");
-	background-size: 100%;
+#optionsButton #options .option span {
+    position: absolute;
+	transition-property: font-size;
+	transition-duration: 0.1s;
 }
 
-#optionsButton #options .option#optionsPlayer {
-	background-image: url("../ressources/playersButton.png");
-	background-size: 100%;
+#optionsButton.open #options .option span {
+    font-size: var(--lineHeight);
 }
 
-#optionsButton #options .option#optionsParameters {
-	background-image: url("../ressources/parametersButton.png");
-	background-size: 100%;
+#optionsButton.closed #options .option span {
+    font-size: 0px;
+}
+
+#optionsButton #options .option#optionsMenu span {
+    top: calc(28% - var(--lineHeight) / 2);
+    left: calc(28% - var(--lineHeight) / 2);
+    transform: rotate(-45deg);
+}
+
+#optionsButton #options .option#optionsPlayer span {
+    top: calc(28% - var(--lineHeight) / 2);
+    left: calc(72% - var(--lineHeight) / 2);
+    transform: rotate(45deg);
+}
+
+#optionsButton #options .option#optionsParameters span {
+    top: calc(72% - var(--lineHeight) / 2);
+    left: calc(28% - var(--lineHeight) / 2);
+    transform: rotate(45deg);
 }

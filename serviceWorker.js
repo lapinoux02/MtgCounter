@@ -18,6 +18,10 @@ const assets = [
 	'/playersOption/playersOption.js',
 	'/parametersMenu/parametersMenu.js',
 	'/dice/dice.js',
+	'/ressources/fonts/style.css',
+	'/ressources/fonts/icomoon.svg',
+	'/ressources/fonts/icomoon.ttf',
+	'/ressources/fonts/icomoon.woff',
 	'/app.css',
 	'/board/board.css',
 	'/playerTile/playerTile.css',
@@ -37,12 +41,7 @@ const assets = [
 	'/ressources/5players.png',
 	'/ressources/6players.png',
 	'/ressources/icon192.png',
-	'/ressources/icon512.png',
-	'/ressources/cross.png',
-	'/ressources/menu.png',
-	'/ressources/optionButton.png',
-	'/ressources/parametersButton.png',
-	'/ressources/playersButton.png'
+	'/ressources/icon512.png'
 ];
 
 self.addEventListener('install', installEvent => {
