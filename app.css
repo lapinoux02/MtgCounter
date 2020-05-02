@@ -1,11 +1,4 @@
 :root {
-	--yellow: #eac814;
-	--lightGrey: #898c68;
-	--darkGrey: #353333;
-	--silver: #dedede;
-	--black: black;
-	--red: #802e2e;
-	--green: #1a4c18;
 	--fontSize1: 7vw;
 	--fontSize2: 6vw;
 	/* hauteur d'une ligne de menus */
@@ -57,13 +50,13 @@ body {
 }
 
 #app.dark {
-	--color1: var(--yellow);
-	--color2: var(--lightGrey);
-	--color3: var(--darkGrey);
-	--color4: var(--silver);
-	--background: var(--black);
-	--grad1: linear-gradient(var(--background), var(--red));
-	--grad2: linear-gradient(var(--background), var(--green));
+	--color1: #eac814;
+	--color2: #898c68;
+	--color3: #353333;
+	--color4: #dedede;
+	--background: black;
+	--grad1: linear-gradient(var(--background), #802e2e);
+	--grad2: linear-gradient(var(--background), #1a4c18);
 }
 
 #app.light {
