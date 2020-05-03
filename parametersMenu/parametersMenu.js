@@ -5,13 +5,14 @@ Vue.component('parameters-menu', {
 			vibrations: CONF.vibrations,
 			keepScreenAlive: CONF.keepScreenAlive,
 			showKeepAwake: 'wakeLock' in navigator || 'keepAwake' in screen,
-			theme: CONF.theme
+			theme: CONF.theme,
+			vibrationsEnabled: !!navigator.vibrate
 		}
 	},
 	template: `<div id="parametersMenu" class="menu">
 		<div id="title">Parameters</div>
 		<div id="options">
-			<div id="vibrationOption" class="menuOption">
+			<div v-if="vibrationsEnabled" id="vibrationOption" class="menuOption">
 				<div class="title">Vibrations</div>
 				<div class="buttonsLine">
 					<div class="rectButton" v-on:click="selectVibration(false)" :class="{active: !vibrations}">NO</div>
