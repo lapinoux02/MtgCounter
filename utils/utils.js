@@ -1,5 +1,5 @@
 function bzz() {
-	if (CONF.vibrations) {
+	if (CONF.vibrations && navigator.vibrate) {
 		navigator.vibrate(50);
 	}
 }

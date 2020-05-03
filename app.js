@@ -1,7 +1,3 @@
-window.onerror = function(message, source, lineno, colno, error) {
-	alert(message)
-}
-
 // Gestion service worker
 if ('serviceWorker' in navigator) {
 	window.addEventListener('load', () => {
