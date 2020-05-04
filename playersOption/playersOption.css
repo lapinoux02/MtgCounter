@@ -1,9 +1,14 @@
+#playersOption {
+	align-items: center;
+}
+
 #playersOption #players {
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
 	padding-left: 8vw;
 	padding-right: 8vw;
+    width: 84vw;
 }
 
 #playersOption #players .playerLine {
@@ -37,6 +42,39 @@
 	justify-content: center;
 }
 
-#playersOption #help img {
-	width: 75vw;
+#playersOption #help {
+    height: 30vw;
+    width: 60vw;
+    display: flex;
+    background: var(--color2);
+    padding: 2px;
+    border-radius: 6px;
+    padding: calc(var(--border) / 2);
+    border-radius: 1vw;
+}
+
+#playersOption #help #mainBlock {
+    flex-grow: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+#playersOption #help #mainBlock .tileRow {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+#playersOption #help .tile {
+    flex-grow: 1;
+    border: 2px solid var(--color1);
+    background: var(--background);
+    margin: calc(var(--border) / 2);
+    border-radius: 1vw;
+    color: var(--color1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10vw;
+    font-weight: 100;
 }

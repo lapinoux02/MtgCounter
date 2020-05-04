@@ -3,8 +3,7 @@ Vue.component('players-option', {
 		return {
 			players: PLAYERS,
 			dragged: null,
-			draggedIndex: null,
-			img: `./ressources/${PLAYERS.length}players.png`
+			draggedIndex: null
 		}
 	},
 	template: `<div id="playersOption" class="menu">
@@ -30,7 +29,19 @@ Vue.component('players-option', {
 			<randomPlayer></randomPlayer>
 		</div>
 		<div id="help">
-			<img :src="img">
+			<div id="mainBlock">
+				<div class="tileRow">
+					<div class="tile">{{(players.length >> 1) + 1}}</div>
+					<div v-if="players.length >= 4" class="tile">{{(players.length >> 1) + 2}}</div>
+					<div v-if="players.length === 6" class="tile">{{(players.length >> 1) + 3}}</div>
+				</div>
+				<div class="tileRow">
+					<div v-if="players.length === 6" class="tile">3</div>
+					<div v-if="players.length >= 4" class="tile">2</div>
+					<div class="tile">1</div>
+				</div>
+			</div>
+			<div v-if="players.length%2" id="sideBlock" class="tile">{{players.length}}</div>
 		</div>
 		<buttonBar :secondary="back"></buttonBar>
 	</div>`,
