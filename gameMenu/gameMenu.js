@@ -3,7 +3,7 @@ Vue.component('game-menu', {
 	data() {
 		return {
 			tmpData : {
-				startingLife: this.gamedata.startingLife,
+				startingLife: CONF.startingLife,
 				playerNumber: PLAYERS.length
 			}
 		}
@@ -36,9 +36,11 @@ Vue.component('game-menu', {
 				p.poisonDamage = 0;
 				p.commanderDamages = PLAYERS.map(pp => ({id: pp.id, damage: 0}));
 			});
+			CONF.startingLife = this.tmpData.startingLife;
 
 			// Sauvegarde de la partie
 			MM.savePlayers();
+			MM.saveConf();
 
 			this.$emit('openboard');
 		},

@@ -26,7 +26,8 @@ const PLAYERS = [];
 const CONF = {
 	vibrations: true,
 	keepScreenAlive: true,
-	theme: 'dark'
+	theme: 'dark',
+	startingLife: 40
 }
 
 new Vue({
@@ -35,9 +36,6 @@ new Vue({
 		return {
 			selectedPlayer: null,
 			vue: 'gameMenu',
-			gameData: {
-				startingLife: 40
-			},
 			players: PLAYERS,
 			conf: CONF
 		}

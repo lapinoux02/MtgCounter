@@ -50,7 +50,6 @@
 <body oncontextmenu="return false">
 	<div id="app" :class="conf.theme">
 		<game-menu v-if="vue === 'gameMenu'"
-			:gamedata="gameData"
 			@openboard="openBoard"
 		></game-menu>
 		<players-option v-if="vue === 'playersOption'"
