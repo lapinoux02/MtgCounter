@@ -29,6 +29,7 @@
 }
 
 .line .counter .cdDamage {
+    color: var(--color1);
 	position: absolute;
 	width: 100vw;
 	text-align: center;

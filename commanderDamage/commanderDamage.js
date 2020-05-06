@@ -14,6 +14,8 @@ Vue.component('commander-damage', {
 	</div>`,
 	methods: {
 		ok() {
+			let red = (a, cd) => a + cd.damage;
+			this.player.life -= this.tmpData.reduce(red, 0) - this.player.commanderDamages.reduce(red, 0);
 			this.player.commanderDamages.length = 0;
 			this.player.commanderDamages.push(...this.tmpData);
 			this.$emit('openboard');
