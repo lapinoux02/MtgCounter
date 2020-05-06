@@ -32,6 +32,7 @@ Vue.component('parameters-menu', {
 					<div class="rectButton" v-on:click="selectTheme('dark')" :class="{active: conf.theme === 'dark'}">Dark</div>
 					<div class="rectButton" v-on:click="selectTheme('light')" :class="{active: conf.theme === 'light'}">Light</div>
 					<div class="rectButton" v-on:click="selectTheme('flat')" :class="{active: conf.theme === 'flat'}">Flat</div>
+					<div class="rectButton" v-on:click="selectTheme('sol')" :class="{active: conf.theme === 'sol'}">Sol</div>
 				</div>
 			</div>
 		</div>

@@ -79,6 +79,16 @@ body {
 	--grad2: #2e7d32;
 }
 
+#app.sol {
+    --color1: #2aa198;
+    --color2: #bac4c8;
+    --color3: #bac4c8;
+    --color4: #c51f5d;
+    --background: #012b37;
+    --grad1: linear-gradient(var(--background) 50%, #dc322f);
+    --grad2: linear-gradient(var(--background) 50%, #6c71c4);
+}
+
 .menu {
 	width: 100vw;
 	height: 98vh;
