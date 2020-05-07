@@ -2,10 +2,7 @@ Vue.component('parameters-menu', {
 	data() {
 		return {
 			conf: CONF,
-			vibrations: CONF.vibrations,
-			keepScreenAlive: CONF.keepScreenAlive,
 			showKeepAwake: 'wakeLock' in navigator || 'keepAwake' in screen,
-			theme: CONF.theme,
 			vibrationsEnabled: !!navigator.vibrate
 		}
 	},
@@ -15,15 +12,15 @@ Vue.component('parameters-menu', {
 			<div v-if="vibrationsEnabled" id="vibrationOption" class="menuOption">
 				<div class="title">Vibrations</div>
 				<div class="buttonsLine">
-					<div class="rectButton" v-on:click="selectVibration(false)" :class="{active: !vibrations}">NO</div>
-					<div class="rectButton" v-on:click="selectVibration(true)" :class="{active: vibrations}">YES</div>
+					<div class="rectButton" v-on:click="selectVibration(false)" :class="{active: !conf.vibrations}">NO</div>
+					<div class="rectButton" v-on:click="selectVibration(true)" :class="{active: conf.vibrations}">YES</div>
 				</div>
 			</div>
 			<div v-if="showKeepAwake" id="wakeLock" class="menuOption">
 				<div class="title">Keep screen awake</div>
 				<div class="buttonsLine">
-					<div class="rectButton" v-on:click="selectWakeLock(false)" :class="{active: !keepScreenAlive}">NO</div>
-					<div class="rectButton" v-on:click="selectWakeLock(true)" :class="{active: keepScreenAlive}">YES</div>
+					<div class="rectButton" v-on:click="selectWakeLock(false)" :class="{active: !conf.keepScreenAlive}">NO</div>
+					<div class="rectButton" v-on:click="selectWakeLock(true)" :class="{active: conf.keepScreenAlive}">YES</div>
 				</div>
 			</div>
 			<div id="theme" class="menuOption">
@@ -36,35 +33,25 @@ Vue.component('parameters-menu', {
 				</div>
 			</div>
 		</div>
-		<buttonBar :primary="validate" :secondary="cancel" :secondaryText="'Cancel'"></buttonBar>
+		<buttonBar :secondary="back"></buttonBar>
 	</div>`,
 	methods: {
 		selectVibration(val) {
+			CONF.vibrations = val;
+			MM.saveConf();
 			bzz();
-			this.vibrations = val;
 		},
 		selectWakeLock(val) {
 			bzz();
-			this.keepScreenAlive = val;
+			CONF.keepScreenAlive = val;
+			MM.saveConf();
 		},
 		selectTheme(val) {
 			bzz();
 			CONF.theme = val;
-		},
-		validate() {
-			// Gestion des vibrations
-			CONF.vibrations = this.vibrations;
-
-			// Gestion de l'extinction de l'écran
-			this.keepScreenAlive ? wakeLock() : wakeUnlock();
-
 			MM.saveConf();
-			this.$emit('openboard');
 		},
-		cancel() {
-			// Gestion du thème
-			CONF.theme = this.theme;
-
+		back() {
 			this.$emit('openboard');
 		}
 	}
