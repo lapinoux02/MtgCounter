@@ -42,10 +42,10 @@ Vue.component('game-menu', {
 			MM.savePlayers();
 			MM.saveConf();
 
-			this.$emit('openboard');
+			history.back();
 		},
 		openBoard() {
-			this.$emit('openboard');
+			history.back();
 		}
 	}
 })

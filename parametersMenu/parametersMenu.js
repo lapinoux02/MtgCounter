@@ -44,6 +44,11 @@ Vue.component('parameters-menu', {
 		selectWakeLock(val) {
 			bzz();
 			CONF.keepScreenAlive = val;
+			if (val) {
+				wakeLock();
+			} else {
+				wakeUnlock();
+			}
 			MM.saveConf();
 		},
 		selectTheme(val) {
@@ -52,7 +57,7 @@ Vue.component('parameters-menu', {
 			MM.saveConf();
 		},
 		back() {
-			this.$emit('openboard');
+			history.back();
 		}
 	}
 })

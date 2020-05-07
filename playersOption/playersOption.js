@@ -59,7 +59,7 @@ Vue.component('players-option', {
 			this.players[i].name = prompt(`Rename ${this.players[i].name}`) || this.players[i].name;
 		},
 		back() {
-			this.$emit('openboard');
+			history.back();
 		}
 	}
 })

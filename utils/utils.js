@@ -56,3 +56,9 @@ function wakeUnlock() {
 		screen.keepAwake = false;
 	}
 }
+
+// Sauvegarde l'ancien state et en crée un nouveau
+function newHistoryState(val) {
+	history.replaceState(val, '');
+	history.pushState(null, window.location.href);
+}

@@ -44,11 +44,6 @@ new Vue({
 		goto(vue) {
 			bzz();
 			this.vue = vue;
-			if (vue !== 'board') {
-				history.pushState(null, window.location.href);
-			} else {
-				history.back();
-			}
 		},
 		openCommanderDamage(player) {
 			this.selectedPlayer = player;
@@ -69,8 +64,8 @@ new Vue({
 	},
 	created() {
 		// Gestion historique (back button)
-		window.onpopstate = () => {
-			this.vue = 'board';
+		window.onpopstate = (e) => {
+			this.vue = e.state || 'board';
 		}
 
 		// Création des joueurs
@@ -81,6 +76,7 @@ new Vue({
 			registerPlayer(1, 'Player 2');
 			registerPlayer(2, 'Player 3');
 			registerPlayer(3, 'Player 4');
+			newHistoryState('board');
 		}
 
 		// Gestion de la conf

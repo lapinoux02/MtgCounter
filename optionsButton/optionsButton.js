@@ -27,12 +27,15 @@ Vue.component('optionsButton', {
 			this.open = !this.open;
 		},
 		openGameMenu() {
+			newHistoryState('board');
 			this.$emit('opengamemenu');
 		},
 		openPlayerOptions() {
+			newHistoryState('board');
 			this.$emit('openplayersoption')
 		},
 		openParametersMenu() {
+			newHistoryState('board');
 			this.$emit('openparametersmenu')
 		}
 	}
