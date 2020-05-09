@@ -5,7 +5,8 @@ Vue.component('game-menu', {
 			tmpData : {
 				startingLife: CONF.startingLife,
 				playerNumber: PLAYERS.length
-			}
+			},
+			showShare: navigator.share
 		}
 	},
 	template: `<div id="gameMenu" class="menu">
@@ -13,10 +14,18 @@ Vue.component('game-menu', {
 		<div id="options">
 			<startingLife :gameData="tmpData"></startingLife>
 			<playersManager :gameData="tmpData"></playersManager>
+			<div v-if="showShare" id="shareGame" class="menuOption">
+				<div class="title" v-on:click="share">Share</div>
+			</div>
 		</div>
 		<buttonBar :primary="startNewGame" :secondary="openBoard" :secondaryText="'Cancel'" :primaryText="'START'"></buttonBar>
 	</div>`,
 	methods: {
+		share() {
+			navigator.share({
+				text: JSON.stringify({players: localStorage.getItem('players'), conf: localStorage.getItem('conf')})
+			})
+		},
 		startNewGame() {
 			// Gestion du nombre de joueurs
 			let length = PLAYERS.length;
