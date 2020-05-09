@@ -16,3 +16,9 @@
 	color: var(--background);
 	background-color: var(--color1);
 }
+
+#gameMenu .separator {
+    margin-left: var(--margin);
+    margin-right: var(--margin);
+    color: var(--color3);
+}

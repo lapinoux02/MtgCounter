@@ -15,7 +15,9 @@ Vue.component('game-menu', {
 			<startingLife :gameData="tmpData"></startingLife>
 			<playersManager :gameData="tmpData"></playersManager>
 			<div v-if="showShare" id="shareGame" class="menuOption">
-				<div class="title" v-on:click="share">Share</div>
+				<div class="title">
+					<span v-on:click="share">Share</span><span class="separator">|</span><span v-on:click="load">Load</span>
+				</div>
 			</div>
 		</div>
 		<buttonBar :primary="startNewGame" :secondary="openBoard" :secondaryText="'Cancel'" :primaryText="'START'"></buttonBar>
@@ -23,8 +25,15 @@ Vue.component('game-menu', {
 	methods: {
 		share() {
 			navigator.share({
-				text: JSON.stringify({players: localStorage.getItem('players'), conf: localStorage.getItem('conf')})
-			})
+				text: minifiedPlayers()
+			});
+		},
+		load() {
+			navigator.clipboard.readText().then(text => {
+				if (inflatePlayers(text)) {
+					history.back();
+				}
+			});
 		},
 		startNewGame() {
 			// Gestion du nombre de joueurs

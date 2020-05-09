@@ -62,3 +62,35 @@ function newHistoryState(val) {
 	history.replaceState(val, '');
 	history.pushState(null, window.location.href);
 }
+
+// "Minifie" les joueurs en mémoire
+function minifiedPlayers() {
+	return JSON.stringify(MM.getPlayers().map(p => [
+		p.id,
+		p.name,
+		p.life,
+		p.poisonDamage,
+		p.commanderDamages.map(cd => [
+			cd.id,
+			cd.damage
+		])
+	]));
+}
+
+// Recrée une partie à partir de donnée minifiée par la fonction minifiedPlayers()
+function inflatePlayers(text) {
+	try {
+		let players = JSON.parse(text).map(p => ({
+			id: p[0],
+			name: p[1],
+			life: p[2],
+			poisonDamage: p[3],
+			commanderDamages: p[4].map(cd => ({id: cd[0], damage: cd[1]}))
+		}));
+		PLAYERS.length = 0;
+		PLAYERS.push(...players);
+		return true;
+	} catch (e) {
+		return null;
+	}
+}
