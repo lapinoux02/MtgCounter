@@ -44,7 +44,7 @@ Vue.component('game-menu', {
 				}
 			} else {
 				for (let i = length; i < this.tmpData.playerNumber; i++) {
-					registerPlayer(i, `Player ${i+1}`);
+					registerPlayer(`Player ${i+1}`);
 				}
 			}
 

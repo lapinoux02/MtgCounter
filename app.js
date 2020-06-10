@@ -15,8 +15,9 @@ class Player {
 		this.commanderDamages = [];
 	}
 }
-const registerPlayer = (id, name) => {
-	PLAYERS.push(new Player(id, name));
+const registerPlayer = (name) => {
+	for (var i=0; PLAYERS.find(p => p.id === i); i++);
+	PLAYERS.push(new Player(i, name));
 	PLAYERS.forEach(p => Object.assign(p.commanderDamages, PLAYERS.map(pp => ({id: pp.id, damage: 0}))));
 }
 
@@ -72,10 +73,10 @@ new Vue({
 		if (MM.loadPlayers()) {
 			this.vue = 'board';
 		} else {
-			registerPlayer(0, 'Player 1');
-			registerPlayer(1, 'Player 2');
-			registerPlayer(2, 'Player 3');
-			registerPlayer(3, 'Player 4');
+			registerPlayer('Player 1');
+			registerPlayer('Player 2');
+			registerPlayer('Player 3');
+			registerPlayer('Player 4');
 			newHistoryState('board');
 		}
 
