@@ -54,11 +54,8 @@ Vue.component('playerTile', {
 		openCommanderDamage() {
 			this.$emit('opencommanderdamage', this.player);
 		},
-		dragStart(player, i) {
-			this.$refs.lifeMinus.stopClick();
-			this.$refs.lifePlus.stopClick();
-			this.$refs.poisonMinus.stopClick();
-			this.$refs.poisonPlus.stopClick();
+		dragStart(e) {
+			stopClick();
 			this.$emit('dragstart');
 		},
 		drop(i) {

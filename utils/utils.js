@@ -4,35 +4,45 @@ function bzz() {
 	}
 }
 
-function addClickHandlers(el, short, long) {
-	let firstTempo = 1000;
-	let tempo = 500;
-	let start = null;
-	let interval = null;
-	el.addEventListener('touchstart', () => {
-		start = new Date().getTime();
-		interval = setTimeout(() => {
+let firstTempo = 1000;
+let tempo = 500;
+class Touch {
+	constructor(touch, long) {
+		this.start = new Date().getTime();
+		this.touchId = touch.identifier;
+		this.interval = setTimeout(() => {
 			long();
 			bzz();
-			interval = setInterval(() => {
+			this.interval = setInterval(() => {
 				long();
 				bzz();
 			}, tempo);
 		}, firstTempo);
-	});
-	el.addEventListener('touchend', () => {
-		let diff = new Date().getTime() - start;
-		start = null;
-		clearInterval(interval);
-		if (diff < 1000) {
-			short();
-			bzz();
-		}
-	});
-	el.stopClick = () => {
-		clearInterval(interval);
-		start = null;
 	}
+}
+
+let touches = [];
+function addClickHandlers(el, short, long) {
+	el.addEventListener('touchstart', (event) => {
+		touches.push(...[...event.touches].map(touch => new Touch(touch, long)));
+	});
+	el.addEventListener('touchend', (event) => {
+		if (!touches.length) return; // Cas où on a vidé la liste des touches à cause d'un drag
+		[...event.changedTouches].forEach(touch => {
+			let touchIndex = touches.findIndex(t => t.touchId === touch.identifier);
+			let diff = new Date().getTime() - touches[touchIndex].start;
+			clearInterval(touches[touchIndex].interval);
+			touches.splice(touchIndex, 1);
+			if (diff < firstTempo) {
+				short();
+				bzz();
+			}
+		});
+	});
+}
+function stopClick() {
+	touches.forEach(touch => clearInterval(touch.interval));
+	touches.length = 0;
 }
 
 let WAKE_LOCK = null;
