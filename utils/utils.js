@@ -25,7 +25,7 @@ let touches = [];
 function addClickHandlers(el, short, long) {
 	el.addEventListener('touchstart', (event) => {
 		document.getElementById('debug').innerHTML += ' ' + [...event.touches].map(e => e.identifier).join(' ');
-		touches.push(...[...event.touches].map(touch => new Touch(touch, long)));
+		touches.push(...[...event.changedTouches].map(touch => new Touch(touch, long)));
 	});
 	el.addEventListener('touchend', (event) => {
 		document.getElementById('debug').innerHTML += ' ' + [...event.changedTouches].map(e => e.identifier).join(' ');
