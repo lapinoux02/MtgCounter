@@ -5,6 +5,7 @@ Vue.component('board', {
 		}
 	},
 	template: `<div id="board">
+		<div id="debug"></div>
 		<playerTile
 			v-for="(player, i) in players"
 			:player="player"

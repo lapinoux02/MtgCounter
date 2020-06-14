@@ -195,3 +195,13 @@
     top: calc(var(--W_6_S) * 2 + var(--M) * 3);
     left: calc(var(--H) + var(--M) * 2);
 }
+
+#debug {
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 50vh;
+    background-color: white;
+}
