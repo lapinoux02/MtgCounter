@@ -24,11 +24,9 @@ class Touch {
 let touches = [];
 function addClickHandlers(el, short, long) {
 	el.addEventListener('touchstart', (event) => {
-		document.getElementById('debug').innerHTML += ' ' + [...event.touches].map(e => e.identifier).join(' ');
 		touches.push(...[...event.changedTouches].map(touch => new Touch(touch, long)));
 	});
 	el.addEventListener('touchend', (event) => {
-		document.getElementById('debug').innerHTML += ' ' + [...event.changedTouches].map(e => e.identifier).join(' ');
 		if (!touches.length) return; // Cas où on a vidé la liste des touches à cause d'un drag
 		[...event.changedTouches].forEach(touch => {
 			let touchIndex = touches.findIndex(t => t.touchId === touch.identifier);
