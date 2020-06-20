@@ -93,6 +93,10 @@
 	animation-iteration-count: infinite;
 }
 
+.playerTile .mainCounter .playerLife.dead {
+	color: var(--lowLifeGlow);
+}
+
 .playerTile .mainCounter .playerName {
 	width: 100%;
 	height: var(--H_N);
