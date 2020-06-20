@@ -1,12 +1,17 @@
 Vue.component('playerTile', {
 	props: ['player'],
+	data() {
+		return {
+			conf: CONF
+		}
+	},
 	computed: {
 		commanderDamage() {
 			return Math.max(...this.player.commanderDamages.map(cd => cd.damage));
 		}
 	},
 	template: `<div class="playerTile"
-			draggable
+			:draggable="conf.screenDrag"
 			droppable
 			ondragover="event.preventDefault()"
 			@dragstart="dragStart"

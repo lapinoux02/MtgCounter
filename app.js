@@ -28,7 +28,8 @@ const CONF = {
 	vibrations: true,
 	keepScreenAlive: true,
 	theme: 'dark',
-	startingLife: 40
+	startingLife: 40,
+	screenDrag: true
 }
 
 new Vue({

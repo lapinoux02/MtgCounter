@@ -23,6 +23,13 @@ Vue.component('parameters-menu', {
 					<div class="rectButton" v-on:click="selectWakeLock(true)" :class="{active: conf.keepScreenAlive}">YES</div>
 				</div>
 			</div>
+			<div id="screenDrag" class="menuOption">
+				<div class="title">Drag on screen</div>
+				<div class="buttonsLine">
+					<div class="rectButton" v-on:click="selectScreenDrag(false)" :class="{active: !conf.screenDrag}">NO</div>
+					<div class="rectButton" v-on:click="selectScreenDrag(true)" :class="{active: conf.screenDrag}">YES</div>
+				</div>
+			</div>
 			<div id="theme" class="menuOption">
 				<div class="title">Theme</div>
 				<div class="buttonsLine">
@@ -49,6 +56,11 @@ Vue.component('parameters-menu', {
 			} else {
 				wakeUnlock();
 			}
+			MM.saveConf();
+		},
+		selectScreenDrag(val) {
+			bzz();
+			CONF.screenDrag = val;
 			MM.saveConf();
 		},
 		selectTheme(val) {
