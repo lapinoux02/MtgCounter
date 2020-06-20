@@ -24,7 +24,7 @@ Vue.component('playerTile', {
 				playerLife: true,
 				lowLife: player.life <= 10 && player.life,
 				dead: !player.life
-			}">{{player.life || '☠'}}</div>
+			}">{{player.life || ''}}<span v-if="!player.life" class="icon-skull"></span></div>
 		</div>
 		<div class="annexeCounters">
 			<div class="poison">
