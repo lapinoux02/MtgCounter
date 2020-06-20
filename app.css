@@ -57,6 +57,7 @@ body {
 	--background: black;
 	--grad1: linear-gradient(var(--background), #802e2e);
 	--grad2: linear-gradient(var(--background), #1a4c18);
+	--lowLifeGlow: #ea1424;
 }
 
 #app.light {
@@ -67,6 +68,7 @@ body {
     --background: #ececec;
 	--grad1: linear-gradient(var(--background), #d8bfbf);
 	--grad2: linear-gradient(var(--background), #aac5a8);
+	--lowLifeGlow: #ea1424;
 }
 
 #app.flat {
@@ -77,6 +79,7 @@ body {
     --background: #484848;
 	--grad1: #af4448;
 	--grad2: #2e7d32;
+	--lowLifeGlow: #ea1424;
 }
 
 #app.sol {
@@ -87,6 +90,7 @@ body {
     --background: #012b37;
     --grad1: linear-gradient(var(--background) 50%, #dc322f);
     --grad2: linear-gradient(var(--background) 50%, #6c71c4);
+	--lowLifeGlow: #ea1424;
 }
 
 .menu {

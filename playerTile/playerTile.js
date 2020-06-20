@@ -20,7 +20,7 @@ Vue.component('playerTile', {
 			<div ref="lifeMinus" class="lifeMinus">-</div>
 			<div ref="lifePlus" class="lifePlus">+</div>
 			<div class="playerName">{{player.name}}</div>
-			<div class="playerLife">{{player.life}}</div>
+			<div :class="{playerLife: true, lowLife: player.life <= 10}">{{player.life}}</div>
 		</div>
 		<div class="annexeCounters">
 			<div class="poison">

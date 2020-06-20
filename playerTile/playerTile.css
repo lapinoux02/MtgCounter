@@ -68,6 +68,31 @@
 	color: var(--color1);
 }
 
+@keyframes lowLife {
+	from {
+		text-shadow: 0 0 0 var(--lowLifeGlow);
+	}
+
+	15% {
+		text-shadow: 0 0 15px var(--lowLifeGlow);
+	}
+
+	45% {
+		text-shadow: 0 0 0px var(--lowLifeGlow);
+	}
+
+	to {
+		text-shadow: 0 0 0 var(--lowLifeGlow);
+	}
+}
+
+.playerTile .mainCounter .playerLife.lowLife {
+	text-shadow: 0 0 0 var(--background);
+	animation: lowLife;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+}
+
 .playerTile .mainCounter .playerName {
 	width: 100%;
 	height: var(--H_N);
