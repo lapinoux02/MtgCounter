@@ -47,9 +47,12 @@ function stopClick() {
 
 let WAKE_LOCK = null;
 async function wakeLock() {
+	if (document.visibilityState !== 'visible') return;
+
 	CONF.keepScreenAlive = true;
 	if ('wakeLock' in navigator) {
 		WAKE_LOCK = await navigator.wakeLock.request('screen');
+		document.addEventListener('visibilitychange', wakeLock);
 	} else if ('keepAwake' in screen) {
 		screen.keepAwake = true;
 	}
@@ -61,6 +64,7 @@ function wakeUnlock() {
 		if (WAKE_LOCK) {
 			WAKE_LOCK.release();
 			WAKE_LOCK = null;
+			document.removeEventListener('visibilitychange', wakeLock);
 		}
 	} else if ('keepAwake' in screen) {
 		screen.keepAwake = false;

@@ -63,45 +63,45 @@
 }
 
 #optionsButton #options .option#dice {
-    width: 24%;
-    height: 24%;
-    padding: 13%;
+	width: 24%;
+	height: 24%;
+	padding: 13%;
 }
 
 #optionsButton #options .option#dice #diceHolder {
 	width: 80%;
 	height: 80%;
-    transform: rotate(45deg);
+	transform: rotate(45deg);
 }
 
 #optionsButton #options .option span {
-    position: absolute;
+	position: absolute;
 	transition-property: font-size;
 	transition-duration: 0.1s;
 }
 
 #optionsButton.open #options .option span {
-    font-size: var(--lineHeight);
+	font-size: var(--lineHeight);
 }
 
 #optionsButton.closed #options .option span {
-    font-size: 0px;
+	font-size: 0px;
 }
 
 #optionsButton #options .option#optionsMenu span {
-    top: calc(28% - var(--lineHeight) / 2);
-    left: calc(28% - var(--lineHeight) / 2);
-    transform: rotate(-45deg);
+	top: calc(28% - var(--lineHeight) / 2);
+	left: calc(28% - var(--lineHeight) / 2);
+	transform: rotate(-45deg);
 }
 
 #optionsButton #options .option#optionsPlayer span {
-    top: calc(28% - var(--lineHeight) / 2);
-    left: calc(72% - var(--lineHeight) / 2);
-    transform: rotate(45deg);
+	top: calc(28% - var(--lineHeight) / 2);
+	left: calc(72% - var(--lineHeight) / 2);
+	transform: rotate(45deg);
 }
 
 #optionsButton #options .option#optionsParameters span {
-    top: calc(72% - var(--lineHeight) / 2);
-    left: calc(28% - var(--lineHeight) / 2);
-    transform: rotate(45deg);
+	top: calc(72% - var(--lineHeight) / 2);
+	left: calc(28% - var(--lineHeight) / 2);
+	transform: rotate(45deg);
 }

@@ -6,38 +6,38 @@
 #tile12 {
 	width: var(--W_2);
 	height: var(--H_2);
-    transform: rotate(180deg);
-    position: absolute;
-    top: var(--M);
-    left: var(--M);
+	transform: rotate(180deg);
+	position: absolute;
+	top: var(--M);
+	left: var(--M);
 }
 
 #tile22 {
 	width: var(--W_2);
 	height: var(--H_2);
-    position: absolute;
-    top: calc(var(--H_2) + var(--M) * 2);
-    left: var(--M);
+	position: absolute;
+	top: calc(var(--H_2) + var(--M) * 2);
+	left: var(--M);
 }
 
 #tile13 {
 	width: var(--W_3_S);
 	height: var(--H);
-    transform: rotate(90deg);
-    transform-origin: calc(var(--H) / 2) calc(var(--H) / 2);
-    position: absolute;
-    top: var(--M);
-    left: var(--M);
+	transform: rotate(90deg);
+	transform-origin: calc(var(--H) / 2) calc(var(--H) / 2);
+	position: absolute;
+	top: var(--M);
+	left: var(--M);
 }
 
 #tile23 {
 	width: var(--W_3_S);
 	height: var(--H);
-    transform: rotate(-90deg);
-    transform-origin: calc(var(--W_3_S) / 2) calc(var(--W_3_S) / 2);
-    position: absolute;
-    top: var(--M);
-    left: calc(var(--H) + var(--M) * 2);
+	transform: rotate(-90deg);
+	transform-origin: calc(var(--W_3_S) / 2) calc(var(--W_3_S) / 2);
+	position: absolute;
+	top: var(--M);
+	left: calc(var(--H) + var(--M) * 2);
 }
 
 #tile33 {
@@ -51,81 +51,81 @@
 #tile14 {
 	width: var(--W_4_S);
 	height: var(--H);
-    transform: rotate(90deg);
-    transform-origin: calc(var(--H) / 2) calc(var(--H) / 2);
-    position: absolute;
-    top: calc(var(--W_4_S) + var(--M) * 2);
-    left: var(--M);
+	transform: rotate(90deg);
+	transform-origin: calc(var(--H) / 2) calc(var(--H) / 2);
+	position: absolute;
+	top: calc(var(--W_4_S) + var(--M) * 2);
+	left: var(--M);
 }
 
 #tile24 {
 	width: var(--W_4_S);
 	height: var(--H);
-    transform: rotate(90deg);
-    transform-origin: calc(var(--H) / 2) calc(var(--H) / 2);
-    position: absolute;
-    top: var(--M);
-    left: var(--M);
+	transform: rotate(90deg);
+	transform-origin: calc(var(--H) / 2) calc(var(--H) / 2);
+	position: absolute;
+	top: var(--M);
+	left: var(--M);
 }
 
 #tile34 {
 	width: var(--W_4_S);
 	height: var(--H);
-    transform: rotate(-90deg);
-    transform-origin: calc(var(--W_4_S) / 2) calc(var(--W_4_S) / 2);
-    position: absolute;
-    top: var(--M);
-    left: calc(var(--H) + var(--M) * 2);
+	transform: rotate(-90deg);
+	transform-origin: calc(var(--W_4_S) / 2) calc(var(--W_4_S) / 2);
+	position: absolute;
+	top: var(--M);
+	left: calc(var(--H) + var(--M) * 2);
 }
 
 #tile44 {
 	width: var(--W_4_S);
 	height: var(--H);
-    transform: rotate(-90deg);
-    transform-origin: calc(var(--W_4_S) / 2) calc(var(--W_4_S) / 2);
-    position: absolute;
-    top: calc(var(--W_4_S) + var(--M) * 2);
-    left: calc(var(--H) + var(--M) * 2);
+	transform: rotate(-90deg);
+	transform-origin: calc(var(--W_4_S) / 2) calc(var(--W_4_S) / 2);
+	position: absolute;
+	top: calc(var(--W_4_S) + var(--M) * 2);
+	left: calc(var(--H) + var(--M) * 2);
 }
 
 #tile15 {
 	width: var(--W_5_S);
 	height: var(--H);
-    transform: rotate(90deg);
-    transform-origin: calc(var(--H) / 2) calc(var(--H) / 2);
-    position: absolute;
-    top: calc(var(--W_5_S) + var(--M) * 2);
-    left: var(--M);
+	transform: rotate(90deg);
+	transform-origin: calc(var(--H) / 2) calc(var(--H) / 2);
+	position: absolute;
+	top: calc(var(--W_5_S) + var(--M) * 2);
+	left: var(--M);
 }
 
 #tile25 {
 	width: var(--W_5_S);
 	height: var(--H);
-    transform: rotate(90deg);
-    transform-origin: calc(var(--H) / 2) calc(var(--H) / 2);
-    position: absolute;
-    top: var(--M);
-    left: var(--M);
+	transform: rotate(90deg);
+	transform-origin: calc(var(--H) / 2) calc(var(--H) / 2);
+	position: absolute;
+	top: var(--M);
+	left: var(--M);
 }
 
 #tile35 {
 	width: var(--W_5_S);
 	height: var(--H);
-    transform: rotate(-90deg);
-    transform-origin: calc(var(--W_5_S) / 2) calc(var(--W_5_S) / 2);
-    position: absolute;
-    top: var(--M);
-    left: calc(var(--H) + var(--M) * 2);
+	transform: rotate(-90deg);
+	transform-origin: calc(var(--W_5_S) / 2) calc(var(--W_5_S) / 2);
+	position: absolute;
+	top: var(--M);
+	left: calc(var(--H) + var(--M) * 2);
 }
 
 #tile45 {
 	width: var(--W_5_S);
 	height: var(--H);
-    transform: rotate(-90deg);
-    transform-origin: calc(var(--W_5_S) / 2) calc(var(--W_5_S) / 2);
-    position: absolute;
-    top: calc(var(--W_5_S) + var(--M) * 2);
-    left: calc(var(--H) + var(--M) * 2);
+	transform: rotate(-90deg);
+	transform-origin: calc(var(--W_5_S) / 2) calc(var(--W_5_S) / 2);
+	position: absolute;
+	top: calc(var(--W_5_S) + var(--M) * 2);
+	left: calc(var(--H) + var(--M) * 2);
 }
 
 #tile55 {
@@ -137,61 +137,61 @@
 }
 
 #tile16 {
-    width: var(--W_6_S);
-    height: var(--H);
-    transform: rotate(90deg);
-    transform-origin: calc(var(--H) / 2) calc(var(--H) / 2);
-    position: absolute;
-    top: calc(var(--W_6_S) * 2 + var(--M) * 3);
-    left: var(--M);
+	width: var(--W_6_S);
+	height: var(--H);
+	transform: rotate(90deg);
+	transform-origin: calc(var(--H) / 2) calc(var(--H) / 2);
+	position: absolute;
+	top: calc(var(--W_6_S) * 2 + var(--M) * 3);
+	left: var(--M);
 }
 
 #tile26 {
-    width: var(--W_6_S);
-    height: var(--H);
-    transform: rotate(90deg);
-    transform-origin: calc(var(--H) / 2) calc(var(--H) / 2);
-    position: absolute;
-    top: calc(var(--W_6_S) + var(--M) * 2);
-    left: var(--M);
+	width: var(--W_6_S);
+	height: var(--H);
+	transform: rotate(90deg);
+	transform-origin: calc(var(--H) / 2) calc(var(--H) / 2);
+	position: absolute;
+	top: calc(var(--W_6_S) + var(--M) * 2);
+	left: var(--M);
 }
 
 #tile36 {
-    width: var(--W_6_S);
-    height: var(--H);
-    transform: rotate(90deg);
-    transform-origin: calc(var(--H) / 2) calc(var(--H) / 2);
-    position: absolute;
-    top: var(--M);
-    left: var(--M);
+	width: var(--W_6_S);
+	height: var(--H);
+	transform: rotate(90deg);
+	transform-origin: calc(var(--H) / 2) calc(var(--H) / 2);
+	position: absolute;
+	top: var(--M);
+	left: var(--M);
 }
 
 #tile46 {
-    width: var(--W_6_S);
-    height: var(--H);
-    transform: rotate(-90deg);
-    transform-origin: calc(var(--W_6_S) / 2) calc(var(--W_6_S) / 2);
-    position: absolute;
-    top: var(--M);
-    left: calc(var(--H) + var(--M) * 2);
+	width: var(--W_6_S);
+	height: var(--H);
+	transform: rotate(-90deg);
+	transform-origin: calc(var(--W_6_S) / 2) calc(var(--W_6_S) / 2);
+	position: absolute;
+	top: var(--M);
+	left: calc(var(--H) + var(--M) * 2);
 }
 
 #tile56 {
-    width: var(--W_6_S);
-    height: var(--H);
-    transform: rotate(-90deg);
-    transform-origin: calc(var(--W_6_S) / 2) calc(var(--W_6_S) / 2);
-    position: absolute;
-    top: calc(var(--W_6_S) + var(--M) * 2);
-    left: calc(var(--H) + var(--M) * 2);
+	width: var(--W_6_S);
+	height: var(--H);
+	transform: rotate(-90deg);
+	transform-origin: calc(var(--W_6_S) / 2) calc(var(--W_6_S) / 2);
+	position: absolute;
+	top: calc(var(--W_6_S) + var(--M) * 2);
+	left: calc(var(--H) + var(--M) * 2);
 }
 
 #tile66 {
-    width: var(--W_6_S);
-    height: var(--H);
-    transform: rotate(-90deg);
-    transform-origin: calc(var(--W_6_S) / 2) calc(var(--W_6_S) / 2);
-    position: absolute;
-    top: calc(var(--W_6_S) * 2 + var(--M) * 3);
-    left: calc(var(--H) + var(--M) * 2);
+	width: var(--W_6_S);
+	height: var(--H);
+	transform: rotate(-90deg);
+	transform-origin: calc(var(--W_6_S) / 2) calc(var(--W_6_S) / 2);
+	position: absolute;
+	top: calc(var(--W_6_S) * 2 + var(--M) * 3);
+	left: calc(var(--H) + var(--M) * 2);
 }

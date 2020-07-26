@@ -44,9 +44,9 @@ body {
 }
 
 #app {
-    overflow: hidden;
-    position: fixed;
-    background-color: var(--color1);
+	overflow: hidden;
+	position: fixed;
+	background-color: var(--color1);
 }
 
 #app.dark {
@@ -62,10 +62,10 @@ body {
 
 #app.light {
 	--color1: #3e6871;
-    --color2: #2978A0;
-    --color3: #98c2da;
-    --color4: #14213D;
-    --background: #ececec;
+	--color2: #2978A0;
+	--color3: #98c2da;
+	--color4: #14213D;
+	--background: #ececec;
 	--grad1: linear-gradient(var(--background), #d8bfbf);
 	--grad2: linear-gradient(var(--background), #aac5a8);
 	--lowLifeGlow: #ea1424;
@@ -73,23 +73,23 @@ body {
 
 #app.flat {
 	--color1: white;
-    --color2: #f9a825;
-    --color3: #cfcfcf;
-    --color4: white;
-    --background: #484848;
+	--color2: #f9a825;
+	--color3: #cfcfcf;
+	--color4: white;
+	--background: #484848;
 	--grad1: #af4448;
 	--grad2: #2e7d32;
 	--lowLifeGlow: #ea1424;
 }
 
 #app.sol {
-    --color1: #2aa198;
-    --color2: #bac4c8;
-    --color3: #bac4c8;
-    --color4: #c51f5d;
-    --background: #012b37;
-    --grad1: linear-gradient(var(--background) 50%, #dc322f);
-    --grad2: linear-gradient(var(--background) 50%, #6c71c4);
+	--color1: #2aa198;
+	--color2: #bac4c8;
+	--color3: #bac4c8;
+	--color4: #c51f5d;
+	--background: #012b37;
+	--grad1: linear-gradient(var(--background) 50%, #dc322f);
+	--grad2: linear-gradient(var(--background) 50%, #6c71c4);
 	--lowLifeGlow: #ea1424;
 }
 
@@ -104,11 +104,11 @@ body {
 }
 
 .menu #title {
-    display: flex;
-    justify-content: center;
-    font-size: var(--fontSize1);
-    color: var(--color4);
-    margin-top: 6vh;
+	display: flex;
+	justify-content: center;
+	font-size: var(--fontSize1);
+	color: var(--color4);
+	margin-top: 6vh;
 }
 
 .menu #options {
@@ -128,9 +128,9 @@ body {
 }
 
 .menu #options .menuOption .title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: var(--fontSize2);
-    color: var(--color2);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: var(--fontSize2);
+	color: var(--color2);
 }

@@ -18,7 +18,7 @@
 }
 
 #gameMenu .separator {
-    margin-left: var(--margin);
-    margin-right: var(--margin);
-    color: var(--color3);
+	margin-left: var(--margin);
+	margin-right: var(--margin);
+	color: var(--color3);
 }

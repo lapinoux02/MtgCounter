@@ -9,11 +9,11 @@
 }
 
 #cd #title {
-    display: flex;
-    justify-content: center;
-    font-size: var(--fontSize1);
-    color: var(--color4);
-    margin-top: 6vh;
+	display: flex;
+	justify-content: center;
+	font-size: var(--fontSize1);
+	color: var(--color4);
+	margin-top: 6vh;
 }
 
 #cd #lines {

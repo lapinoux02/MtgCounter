@@ -26,39 +26,39 @@
 	height: var(--H);
 	width: 50%;
 	z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: calc(var(--H_M) - var(--H_N) - 3vw);
-    color: var(--color3);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: calc(var(--H_M) - var(--H_N) - 3vw);
+	color: var(--color3);
 }
 
 .playerTile .mainCounter .lifePlus:before {
-    content: "";
-    width: 40%;
+	content: "";
+	width: 40%;
 }
 
 .playerTile .mainCounter .lifeMinus {
 	height: var(--H);
 	width: 50%;
 	z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: calc(var(--H_M) - var(--H_N) - 3vw);
-    color: var(--color3);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: calc(var(--H_M) - var(--H_N) - 3vw);
+	color: var(--color3);
 }
 
 .playerTile .mainCounter .lifeMinus:after {
-    content: "";
-    width: 40%;
+	content: "";
+	width: 40%;
 }
 
 .playerTile .mainCounter .playerLife {
 	width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	height: calc(var(--H_M) - var(--H_N));
 	font-size: calc(var(--H_M) - var(--H_N) - 8vw);
 	position: absolute;
@@ -130,9 +130,9 @@
 .playerTile .annexeCounters .poison .poisonPlus {
 	z-index: 1;
 	width: 50%;
-    color: var(--color3);
-    font-weight: bolder;
-    text-align: center;
+	color: var(--color3);
+	font-weight: bolder;
+	text-align: center;
 }
 
 .playerTile .annexeCounters .poison .poisonPlus:before {
@@ -143,9 +143,9 @@
 .playerTile .annexeCounters .poison .poisonMinus {
 	z-index: 1;
 	width: 50%;
-    color: var(--color3);
-    font-weight: bolder;
-    text-align: center;
+	color: var(--color3);
+	font-weight: bolder;
+	text-align: center;
 }
 
 .playerTile .annexeCounters .poison .poisonMinus:after {
@@ -154,10 +154,10 @@
 }
 
 .playerTile .annexeCounters .poison .poisonDamage {
-    position: absolute;
+	position: absolute;
 	width: 50%;
-    color: var(--color1);
-    text-align: center;
+	color: var(--color1);
+	text-align: center;
 }
 
 .playerTile .annexeCounters .commanderDamage {
@@ -168,5 +168,5 @@
 	font-size: var(--H_A);
 	line-height: var(--H_A);
 	text-align: center;
-    color: var(--color1);
+	color: var(--color1);
 }
