@@ -1,7 +1,7 @@
 // Gestion service worker
 if ('serviceWorker' in navigator) {
 	window.addEventListener('load', () => {
-		navigator.serviceWorker.register('/MtgCounter/serviceWorker.js');
+		navigator.serviceWorker.register('/MtgCounter/serviceWorker.js', {scope: '/MtgCounter/'});
 	});
 }
 
