@@ -37,7 +37,7 @@ Vue.component('playerTile', {
 	</div>`,
 	methods: {
 		remove1Life() {
-			if (this.player.life) {
+			if (this.player.life > 0) {
 				this.player.life--;
 			}
 		},
