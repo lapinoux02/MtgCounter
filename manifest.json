@@ -10,7 +10,7 @@
       "sizes": "512x512",
       "type": "image/png"
     }],
-  "start_url": "http://bluecactus.freeboxos.fr/MtgCounter/index.html",
+  "start_url": "https://bluecactus.freeboxos.fr/MtgCounter/index.html",
   "display": "standalone",
   "background_color": "#353333",
   "orientation": "portrait",
