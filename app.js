@@ -47,10 +47,6 @@ new Vue({
 			bzz();
 			this.vue = vue;
 		},
-		openCommanderDamage(player) {
-			this.selectedPlayer = player;
-			this.goto('commanderDamage');
-		},
 		openBoard() {
 			this.goto('board');
 		},

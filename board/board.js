@@ -10,7 +10,6 @@ Vue.component('board', {
 			:player="player"
 			:id="getTileId(i)"
 			:key="i"
-			@opencommanderdamage="openCommanderDamage"
 			@dragstart="dragStart(player, i)"
 			@drop="drop(i)"
 		></playerTile>
@@ -23,9 +22,6 @@ Vue.component('board', {
 	methods: {
 		getTileId(i) {
 			return `tile${i + 1}${this.players.length}`
-		},
-		openCommanderDamage(e) {
-			this.$emit('opencommanderdamage', e);
 		},
 		openGameMenu() {
 			this.$emit('opengamemenu');

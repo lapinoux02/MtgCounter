@@ -2,7 +2,8 @@ Vue.component('playerTile', {
 	props: ['player'],
 	data() {
 		return {
-			conf: CONF
+			conf: CONF,
+			commanderDamageOpened: false
 		}
 	},
 	computed: {
@@ -16,6 +17,9 @@ Vue.component('playerTile', {
 			ondragover="event.preventDefault()"
 			@dragstart="dragStart"
 			@drop="drop">
+		<div class="commanderDamagePopup" :class="commanderDamageOpened ? 'open' : 'closed'">
+			<commanderDamage :player="player"></commanderDamage>
+		</div>
 		<div class="mainCounter">
 			<div ref="lifeMinus" class="lifeMinus">-</div>
 			<div ref="lifePlus" class="lifePlus">+</div>
@@ -32,7 +36,7 @@ Vue.component('playerTile', {
 				<div ref="poisonPlus" class="poisonPlus">+</div>
 				<div class="poisonDamage">{{player.poisonDamage}}</div>
 			</div>
-			<div class="commanderDamage" v-on:click="openCommanderDamage">{{commanderDamage}}</div>
+			<div class="commanderDamage" @touchstart="toggleCommanderDamage">{{commanderDamage}}</div>
 		</div>
 	</div>`,
 	methods: {
@@ -66,8 +70,8 @@ Vue.component('playerTile', {
 		add5Poison() {
 			this.player.poisonDamage += 5;
 		},
-		openCommanderDamage() {
-			this.$emit('opencommanderdamage', this.player);
+		toggleCommanderDamage() {
+			this.commanderDamageOpened = !this.commanderDamageOpened;
 		},
 		dragStart(e) {
 			stopClick();

@@ -57,16 +57,10 @@
 			@openboard="openBoard"
 		></parameters-menu>
 		<board v-if="vue === 'board'"
-			@opencommanderdamage="openCommanderDamage"
 			@opengamemenu="openGameMenu"
 			@openplayersoption="openPlayersOption"
 			@openparametersmenu="openParametersMenu"
 		></board>
-		<commander-damage
-			v-if="vue === 'commanderDamage'"
-			:player="selectedPlayer"
-			@openboard="openBoard"
-		></commander-damage>
 	</div>
 </body>
 <script src="./app.js"></script>

@@ -1,6 +1,7 @@
 :root {
 	--fontSize1: 7vw;
 	--fontSize2: 6vw;
+	--fontSize3: 4vw;
 	/* hauteur d'une ligne de menus */
 	--lineHeight: 10vw;
 	/* marge entre elements de menus*/

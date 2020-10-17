@@ -15,6 +15,28 @@
 	border-radius: var(--B_R);
 }
 
+.playerTile .commanderDamagePopup {
+	height: calc(var(--H) - var(--H_A));
+	background: var(--background);
+	z-index: 2;
+	position: absolute;
+	border-radius: var(--B_R);
+	display: flex;
+	flex-grow: 1;
+	overflow: hidden;
+	transition: width 0.1s, margin-left 0.1s;
+}
+
+.playerTile .commanderDamagePopup.closed {
+	width: 0px;
+	margin-left: 100%
+}
+
+.playerTile .commanderDamagePopup.open {
+	width: 100%;
+	margin-left: 0px;
+}
+
 .playerTile .mainCounter {
 	height: var(--H_M);
 	display: flex;

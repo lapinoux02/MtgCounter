@@ -1,36 +1,40 @@
 .line {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: flex-start;
 	align-items: stretch;
+	font-size: var(--fontSize3);
+	color: var(--color2);
 }
 
 .line .cdName {
+	width: 50%;
 	display: flex;
 	justify-content: center;
-	font-size: var(--fontSize2);
-	color: var(--color2)
+	align-items: center;
+	overflow: hidden;
+	white-space: nowrap;
 }
 
-.line .counter {
+.line .cdLineCounter {
+	width: 50%;
 	display: flex;
-	height: var(--lineHeight);
-	flex-direction: row;
-	justify-content: space-around;
-	font-size: var(--fontSize2);
 }
 
-.line .counter .cdMinus, #cd #lines .line .counter .cdPlus {
-	width: 50vw;
+.line .cdLineCounter .cdMinus, .line .cdLineCounter .cdPlus {
+	width: 50%;
 	display: flex;
+	align-items: center;
 	justify-content: center;
-	z-index: 1;
 	color: var(--color3);
+	z-index: 1;
 }
 
-.line .counter .cdDamage {
-	color: var(--color1);
+.line .cdLineCounter .cdDamage {
+	width: 50%;
 	position: absolute;
-	width: 100vw;
-	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--color1);
 }
