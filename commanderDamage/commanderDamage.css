@@ -5,6 +5,7 @@
 	align-items: stretch;
 	justify-content: space-evenly;
 	background-color: var(--background);
+	opacity: 0.92;
 }
 
 .cd .close {

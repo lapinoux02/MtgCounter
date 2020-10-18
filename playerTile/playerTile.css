@@ -17,7 +17,6 @@
 
 .playerTile .commanderDamagePopup {
 	height: calc(var(--H) - var(--H_A));
-	background: var(--background);
 	z-index: 2;
 	position: absolute;
 	border-radius: var(--B_R);
