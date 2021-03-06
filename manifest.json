@@ -12,7 +12,7 @@
       "type": "image/png",
       "purpose": "maskable"
     }],
-  "start_url": "https://bluecactus.freeboxos.fr/MtgCounter/index.html",
+  "start_url": "https://pinkcactus.freeboxos.fr/MtgCounter/index.html",
   "display": "standalone",
   "background_color": "#353333",
   "orientation": "portrait",
