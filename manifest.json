@@ -5,12 +5,12 @@
       "src": "./ressources/icon192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any maskable"
     }, {
       "src": "./ressources/icon512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any maskable"
     }],
   "start_url": "https://pinkcactus.freeboxos.fr/MtgCounter/index.html",
   "display": "standalone",
